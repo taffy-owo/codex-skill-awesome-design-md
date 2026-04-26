@@ -1,0 +1,4 @@
+interface:
+  display_name: "Awesome Design MD"
+  short_description: "Apply local DESIGN.md templates."
+  default_prompt: "Use $awesome-design-md to choose and install a DESIGN.md for this frontend project."

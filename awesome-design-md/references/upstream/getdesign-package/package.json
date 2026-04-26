@@ -1,0 +1,46 @@
+{
+  "name": "getdesign",
+  "version": "0.6.8",
+  "description": "CLI for installing DESIGN.md templates into projects",
+  "homepage": "https://getdesign.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoltAgent/awesome-design-md.git",
+    "directory": "cli"
+  },
+  "bugs": {
+    "url": "https://github.com/VoltAgent/awesome-design-md/issues"
+  },
+  "keywords": [
+    "getdesign",
+    "design-md",
+    "design-system",
+    "cli",
+    "ai",
+    "templates"
+  ],
+  "type": "module",
+  "bin": {
+    "getdesign": "./bin/cli.mjs"
+  },
+  "files": [
+    "bin",
+    "releases",
+    "src",
+    "scripts",
+    "templates",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "node ./src/cli.mjs",
+    "sync-templates": "node ./scripts/sync-templates.mjs",
+    "prepack": "node ./scripts/sync-templates.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
