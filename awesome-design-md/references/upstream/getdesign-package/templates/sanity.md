@@ -1,357 +1,661 @@
-# Design System Inspired by Sanity
+---
+version: alpha
+name: Saniti-design-analysis
+description: An inspired interpretation of Saniti's design language — a dark-first, content-platform marketing system that pairs an oversized editorial display sans (waldenburgNormal) with IBM Plex Mono for technical eyebrows. The site reads like a software-engineering trade journal: near-black `{colors.canvas}` reading bands, white text, a single signature coral-red accent (`{colors.brand}`) reserved for the highest-priority action, and a deliberate light-theme inversion on commercial pages (pricing) where dense feature tables demand maximum legibility. Display sizes climb to 112px with tightly-cut negative tracking; rounded pills coexist with sharply-cut 3–6px application-grade radii from the Studio screenshots, signalling the dual identity of "marketing brand" and "developer tool."
 
-## 1. Visual Theme & Atmosphere
+colors:
+  primary: "#0b0b0b"
+  on-primary: "#ffffff"
+  brand: "#f36458"
+  brand-deep: "#dd0000"
+  ink: "#0b0b0b"
+  ink-soft: "#212121"
+  graphite: "#353535"
+  slate: "#3c4758"
+  slate-soft: "#505b6c"
+  mute: "#797979"
+  ash: "#b9b9b9"
+  hairline: "#ededed"
+  hairline-soft: "#353535"
+  canvas: "#0b0b0b"
+  canvas-soft: "#212121"
+  canvas-light: "#ffffff"
+  canvas-paper: "#ededed"
+  on-canvas-light: "#0b0b0b"
+  link-blue: "#0052ef"
+  link-blue-soft: "#55beff"
+  surface-blue-bg: "#afe3ff"
+  success: "#37cd84"
+  error: "#dd0000"
 
-Sanity's website is a developer-content platform rendered as a nocturnal command center -- dark, precise, and deeply structured. The entire experience sits on a near-black canvas (`#0b0b0b`) that reads less like a "dark mode toggle" and more like the natural state of a tool built for people who live in terminals. Where most CMS marketing pages reach for friendly pastels and soft illustration, Sanity leans into the gravity of its own product: structured content deserves a structured stage.
+typography:
+  display-mega:
+    fontFamily: waldenburgNormal
+    fontSize: 112px
+    fontWeight: 400
+    lineHeight: 1.0
+    letterSpacing: -4.48px
+    fontFeature: cv01, cv11, cv12, cv13, ss07
+  display-xl:
+    fontFamily: waldenburgNormal
+    fontSize: 72px
+    fontWeight: 400
+    lineHeight: 1.05
+    letterSpacing: -2.88px
+  display-lg:
+    fontFamily: waldenburgNormal
+    fontSize: 60px
+    fontWeight: 400
+    lineHeight: 0.8
+  display-md:
+    fontFamily: waldenburgNormal
+    fontSize: 48px
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: -1.68px
+  display-sm:
+    fontFamily: waldenburgNormal
+    fontSize: 38px
+    fontWeight: 400
+    lineHeight: 1.1
+    letterSpacing: -1.14px
+  heading-md:
+    fontFamily: waldenburgNormal
+    fontSize: 32px
+    fontWeight: 425
+    lineHeight: 1.13
+    letterSpacing: -0.32px
+  heading-sm:
+    fontFamily: waldenburgNormal
+    fontSize: 24px
+    fontWeight: 400
+    lineHeight: 1.1
+    letterSpacing: -0.24px
+  subtitle:
+    fontFamily: waldenburgNormal
+    fontSize: 18px
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: -0.18px
+  body:
+    fontFamily: waldenburgNormal
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 1.5
+  body-sm:
+    fontFamily: waldenburgNormal
+    fontSize: 15px
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: -0.15px
+  caption:
+    fontFamily: waldenburgNormal
+    fontSize: 13px
+    fontWeight: 400
+    lineHeight: 1.5
+  caption-tight:
+    fontFamily: waldenburgNormal
+    fontSize: 13px
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: -0.13px
+  meta:
+    fontFamily: waldenburgNormal
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 1.5
+    letterSpacing: -0.12px
+  mono-eyebrow:
+    fontFamily: ibmPlexMono
+    fontSize: 13px
+    fontWeight: 400
+    lineHeight: 1.5
+  mono-caps:
+    fontFamily: ibmPlexMono
+    fontSize: 11px
+    fontWeight: 400
+    lineHeight: 1.5
+  mono-micro:
+    fontFamily: ibmPlexMono
+    fontSize: 10px
+    fontWeight: 400
+    lineHeight: 1.3
+  button-lg:
+    fontFamily: waldenburgNormal
+    fontSize: 16px
+    fontWeight: 500
+    lineHeight: 1.5
+  button-sm:
+    fontFamily: waldenburgNormal
+    fontSize: 13px
+    fontWeight: 500
+    lineHeight: 1.3
+    letterSpacing: -0.13px
+  button-uppercase:
+    fontFamily: waldenburgNormal
+    fontSize: 11px
+    fontWeight: 600
+    lineHeight: 1.5
 
-The signature typographic voice is waldenburgNormal -- a distinctive, slightly geometric sans-serif with tight negative letter-spacing (-0.32px to -4.48px at display sizes) that gives headlines a compressed, engineered quality. At 112px hero scale with -4.48px tracking, the type feels almost machined -- like precision-cut steel letterforms. This is paired with IBM Plex Mono for code and technical labels, creating a dual-register voice: editorial authority meets developer credibility.
+rounded:
+  none: 0px
+  app-xs: 3px
+  app-sm: 4px
+  app-md: 5px
+  app-lg: 6px
+  marketing: 12px
+  full: 99999px
 
-What makes Sanity distinctive is the interplay between its monochromatic dark palette and vivid, saturated accent punctuation. The neutral scale runs from pure black through a tightly controlled gray ramp (`#0b0b0b` -> `#212121` -> `#353535` -> `#797979` -> `#b9b9b9` -> `#ededed` -> `#ffffff`) with no warm or cool bias -- just pure, achromatic precision. Against this disciplined backdrop, a neon green accent (display-p3 green) and electric blue (`#0052ef`) land with the impact of signal lights in a dark control room. The orange-red CTA (`#f36458`) provides the only warm touch in an otherwise cool system.
+spacing:
+  xxs: 4px
+  xs: 8px
+  sm: 12px
+  md: 16px
+  lg: 24px
+  xl: 32px
+  xxl: 48px
+  section: 64px
+  section-lg: 96px
+
+components:
+  button-primary:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-lg}"
+    rounded: "{rounded.full}"
+    padding: 12px
+    height: 44px
+  button-primary-on-light:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button-lg}"
+    rounded: "{rounded.full}"
+    padding: 12px
+    height: 44px
+  button-brand:
+    backgroundColor: "{colors.brand}"
+    textColor: "{colors.ink}"
+    typography: "{typography.button-lg}"
+    rounded: "{rounded.full}"
+    padding: 12px
+    height: 44px
+  button-secondary-dark:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ash}"
+    typography: "{typography.button-sm}"
+    rounded: "{rounded.app-md}"
+    padding: 12px
+    height: 36px
+  button-ghost-dark:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ash}"
+    typography: "{typography.button-sm}"
+    rounded: "{rounded.full}"
+    padding: 12px
+    height: 36px
+  button-app-tab:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ash}"
+    typography: "{typography.button-uppercase}"
+    rounded: "{rounded.app-sm}"
+    padding: 8px
+    height: 32px
+  nav-bar-dark:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button-lg}"
+    height: 64px
+    padding: 24px
+  nav-link:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button-lg}"
+    padding: 8px
+  hero-display:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.display-mega}"
+    padding: 48px
+  marketing-section-dark:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body}"
+    padding: 96px
+  marketing-section-light:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    padding: 96px
+  marketing-section-paper:
+    backgroundColor: "{colors.canvas-paper}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    padding: 96px
+  feature-card-dark:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body}"
+    rounded: "{rounded.marketing}"
+    padding: 32px
+  feature-card-brand:
+    backgroundColor: "{colors.brand}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.marketing}"
+    padding: 32px
+  feature-card-light:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.marketing}"
+    padding: 32px
+  pricing-card:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.marketing}"
+    padding: 32px
+  pricing-card-featured:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body}"
+    rounded: "{rounded.marketing}"
+    padding: 32px
+  pricing-amount:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-md}"
+  comparison-table-row:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm}"
+    padding: 16px
+  studio-window:
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.app-lg}"
+    padding: 16px
+  text-input:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.app-xs}"
+    padding: 12px
+    height: 44px
+  text-input-dark:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ash}"
+    typography: "{typography.body}"
+    rounded: "{rounded.app-xs}"
+    padding: 12px
+    height: 44px
+  text-input-focused:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body}"
+    rounded: "{rounded.app-xs}"
+    padding: 12px
+  textarea:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ash}"
+    typography: "{typography.body}"
+    rounded: "{rounded.app-xs}"
+    padding: 12px
+  badge-neutral:
+    backgroundColor: "{colors.canvas-light}"
+    textColor: "{colors.ink}"
+    typography: "{typography.caption}"
+    rounded: "{rounded.full}"
+    padding: 8px
+  badge-filled:
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.caption}"
+    rounded: "{rounded.full}"
+    padding: 8px
+  brand-dot:
+    backgroundColor: "{colors.brand}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.full}"
+    size: 12px
+  footer:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body}"
+    padding: 64px
+  footer-link:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ash}"
+    typography: "{typography.caption}"
+  footer-eyebrow:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.mute}"
+    typography: "{typography.mono-caps}"
+  alert-banner:
+    backgroundColor: "{colors.surface-blue-bg}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.app-lg}"
+    padding: 16px
+---
+
+## Overview
+
+Saniti's marketing surface is built around a single, high-conviction idea: a content platform should look like an editorial property. The homepage opens onto a near-black `{colors.canvas}` page where a 112px display headline ("Structure powers intelligence") fills the entire viewport with `{typography.display-mega}` set in the proprietary `waldenburgNormal` sans, cut at -4.48px tracking. White type sits on this dark stage like ink on a printed broadside. A single coral-red accent (`{colors.brand}`) appears sparingly — never on backgrounds, only on a few key CTAs and the brand dot — keeping the page feeling sober rather than promotional.
+
+The system runs in two modes that share the same type system but invert canvas. The dark mode (homepage, content-agent, studio-marketing) is the brand voice: oversized headlines, sparse white body, deep-navy slate accents, and IBM Plex Mono eyebrows lending technical credibility. The light mode (pricing) is the commercial voice: white canvas, black ink, dense 4-tier comparison tables, and the same coral-red `{colors.brand}` reused as the featured pricing tier's accent. Switching between the two modes mid-document is part of the page rhythm — Saniti treats colour theme as section-scoped, not page-scoped.
+
+Two type families do all the work: `waldenburgNormal` for every running text role (display through caption), and `ibmPlexMono` reserved exclusively for technical eyebrows and small-caps labels. Display sizes range from 112px down to 38px in a continuous editorial scale; tracking tightens aggressively on display (-4.48px at 112px) and relaxes to neutral on body (16px). OpenType variants are switched on across the marketing copy (`cv01`, `cv11`, `cv12`, `cv13`, `ss07`) — characters like the single-storey `g` and rounded `t` give the headlines a humanist, slightly literary feel.
 
 **Key Characteristics:**
-- Near-black canvas (`#0b0b0b`) as the default, natural environment -- not a dark "mode" but the primary identity
-- waldenburgNormal with extreme negative tracking at display sizes, creating a precision-engineered typographic voice
-- Pure achromatic gray scale -- no warm or cool undertones, pure neutral discipline
-- Vivid accent punctuation: neon green, electric blue (`#0052ef`), and coral-red (`#f36458`) against the dark field
-- Pill-shaped primary buttons (99999px radius) contrasting with subtle rounded rectangles (3-6px) for secondary actions
-- IBM Plex Mono as the technical counterweight to the editorial display face
-- Full-bleed dark sections with content contained in measured max-width containers
-- Hover states that shift to electric blue (`#0052ef`) across all interactive elements -- a consistent "activation" signal
+- Dark-first marketing surface (`{colors.canvas}` `#0b0b0b`) with white type and a single coral-red accent (`{colors.brand}`)
+- Oversized editorial display type up to 112px in `waldenburgNormal` with aggressive negative tracking
+- Dual-theme rhythm: dark hero/feature sections invert to light pricing/comparison surfaces, both using the same type system
+- IBM Plex Mono reserved exclusively for technical eyebrows and small-caps labels — every other role is the proprietary sans
+- Pill primary buttons (`{rounded.full}`) for marketing CTAs paired with sharply-cut application radii (3–6px) for in-product Studio screenshots
+- 4-tier pricing card grid where the featured tier is signalled by full-fill `{colors.ink}` inversion, not by a coloured ribbon
+- Dense feature-comparison tables on `{colors.canvas-light}` with hairline `{colors.hairline}` row dividers — the densest typographic surface in the system
 
-## 2. Color Palette & Roles
+## Colors
 
-### Primary Brand
-- **Sanity Black** (`#0b0b0b`): The primary canvas and dominant surface color. Not pure black but close enough to feel absolute. The foundation of the entire visual identity.
-- **Pure Black** (`#000000`): Used for maximum-contrast moments, deep overlays, and certain border accents.
-- **Sanity Red** (`#f36458`): The primary CTA and brand accent -- a warm coral-red that serves as the main call-to-action color. Used for "Get Started" buttons and primary conversion points.
+### Brand & Accent
+- **Coral-Red** (`{colors.brand}` — `#f36458`): The single signature accent. Reserved for the highest-priority CTA per page (one occurrence per viewport on most pages), the brand dot beside the wordmark, and brand-card surface fills on content-agent and select feature panels. Used sparingly enough that a viewer can predict where it will appear.
+- **Brand Deep** (`{colors.brand-deep}` — `#dd0000`): The error/destructive variant — never used as a hero or section accent.
+- **Black** (`{colors.primary}` — `#0b0b0b`): Default canvas in dark sections; primary action fill on light sections; default text colour on light surfaces. The most-used colour in the system after `{colors.on-primary}`.
 
-### Accent & Interactive
-- **Electric Blue** (`#0052ef`): The universal hover/active state color across the entire system. Buttons, links, and interactive elements all shift to this blue on hover. Also used as `--color-blue-700` for focus rings and active states.
-- **Light Blue** (`#55beff` / `#afe3ff`): Secondary blue variants used for accent backgrounds, badges, and dimmed blue surfaces.
-- **Neon Green** (`color(display-p3 .270588 1 0)`): A vivid, wide-gamut green used as `--color-fg-accent-green` for success states and premium feature highlights. Falls back to `#19d600` in sRGB.
-- **Accent Magenta** (`color(display-p3 .960784 0 1)`): A vivid wide-gamut magenta for specialized accent moments.
+### Surface
+- **Canvas** (`{colors.canvas}` — `#0b0b0b`): Default dark-section background. Near-black with no warmth.
+- **Canvas Soft** (`{colors.canvas-soft}` — `#212121`): Card and panel surface inside dark sections. Used for feature-card-dark and Studio-window mockups. Provides a single-step elevation cue.
+- **Canvas Light** (`{colors.canvas-light}` — `#ffffff`): Primary light-mode background. Used for the entire pricing page, marketing-section-light bands, and pricing-card surface.
+- **Canvas Paper** (`{colors.canvas-paper}` — `#ededed`): Warm-grey alternate light surface used for some hero-card tiles on the studio page; chosen to lift cards a half-tone above pure white without losing the clean reading feel.
+- **Hairline Soft** (`{colors.hairline-soft}` — `#353535`): 1-pixel border colour on dark cards and dialog panels.
+- **Hairline** (`{colors.hairline}` — `#ededed`): 1-pixel border on light cards, comparison-table dividers, and feature-grid rules.
+- **Surface Blue Bg** (`{colors.surface-blue-bg}` — `#afe3ff`): Soft-blue alert/info surface — the only chromatic surface fill in the system.
 
-### Surface & Background
-- **Near Black** (`#0b0b0b`): Default page background and primary surface.
-- **Dark Gray** (`#212121`): Elevated surface color for cards, secondary containers, input backgrounds, and subtle layering above the base canvas.
-- **Medium Dark** (`#353535`): Tertiary surface and border color for creating depth between dark layers.
-- **Pure White** (`#ffffff`): Used for inverted sections, light-on-dark text, and specific button surfaces.
-- **Light Gray** (`#ededed`): Light surface for inverted/light sections and subtle background tints.
-
-### Neutrals & Text
-- **White** (`#ffffff`): Primary text color on dark surfaces, maximum legibility.
-- **Silver** (`#b9b9b9`): Secondary text, body copy on dark surfaces, muted descriptions, and placeholder text.
-- **Medium Gray** (`#797979`): Tertiary text, metadata, timestamps, and de-emphasized content.
-- **Charcoal** (`#212121`): Text on light/inverted surfaces.
-- **Near Black Text** (`#0b0b0b`): Primary text on white/light button surfaces.
+### Text
+- **Ink** (`{colors.ink}` — `#0b0b0b`): Headlines and body on light surfaces.
+- **Ink Soft** (`{colors.ink-soft}` — `#212121`): Secondary text on light surfaces; container background colour for dark cards.
+- **Graphite** (`{colors.graphite}` — `#353535`): Tertiary text and dividers in dark sections.
+- **Slate** (`{colors.slate}` — `#3c4758`) / **Slate Soft** (`{colors.slate-soft}` — `#505b6c`): Cool blue-grey neutrals used for secondary-link text and de-emphasized rule lines on dark.
+- **Mute** (`{colors.mute}` — `#797979`): Mid-grey mono caption colour, footer eyebrows.
+- **Ash** (`{colors.ash}` — `#b9b9b9`): Default body text on dark surfaces.
+- **On Primary** (`{colors.on-primary}` — `#ffffff`): Headline colour on dark surfaces; ink colour on `{colors.brand}` and `{colors.ink}` filled buttons.
 
 ### Semantic
-- **Error Red** (`#dd0000`): Destructive actions, validation errors, and critical warnings -- a pure, high-saturation red.
-- **GPC Green** (`#37cd84`): Privacy/compliance indicator green.
-- **Focus Ring Blue** (`#0052ef`): Focus ring color for accessibility, matching the interactive blue.
+- **Link Blue** (`{colors.link-blue}` — `#0052ef`): Inline link colour on light surfaces; standard hyperlink hue.
+- **Link Blue Soft** (`{colors.link-blue-soft}` — `#55beff`): Link colour on dark surfaces.
+- **Success** (`{colors.success}` — `#37cd84`): Validation success — used in the Studio status pill and "available" markers in the pricing comparison table.
+- **Error** (`{colors.error}` — `#dd0000`): Required-field markers and error messages.
 
-### Border System
-- **Dark Border** (`#0b0b0b`): Primary border on dark containers -- barely visible, maintaining minimal containment.
-- **Subtle Border** (`#212121`): Standard border for inputs, textareas, and card edges on dark surfaces.
-- **Medium Border** (`#353535`): More visible borders for emphasized containment and dividers.
-- **Light Border** (`#ffffff`): Border on inverted/light elements or buttons needing contrast separation.
-- **Orange Border** (`color(display-p3 1 0.3333 0)`): Special accent border for highlighted/featured elements.
-
-## 3. Typography Rules
+## Typography
 
 ### Font Family
-- **Display / Headline**: `waldenburgNormal`, fallback: `waldenburgNormal Fallback, ui-sans-serif, system-ui`
-- **Body / UI**: `waldenburgNormal`, fallback: `waldenburgNormal Fallback, ui-sans-serif, system-ui`
-- **Code / Technical**: `IBM Plex Mono`, fallback: `ibmPlexMono Fallback, ui-monospace`
-- **Fallback / CJK**: `Helvetica`, fallback: `Arial, Hiragino Sans GB, STXihei, Microsoft YaHei, WenQuanYi Micro Hei`
-
-*Note: waldenburgNormal is a custom typeface. For external implementations, use Inter or Space Grotesk as the sans substitute (geometric, slightly condensed feel). IBM Plex Mono is available on Google Fonts.*
+The marketing system runs on **waldenburgNormal**, a proprietary humanist sans in the ABC Walden Burn family — uniform stroke contrast, single-storey `a` available via `cv01`, slightly compressed counters, and stylistic alternates (`ss07`, `cv11`–`cv13`) that round terminals and soften the `g`/`y` descenders. The result is editorial — it reads like a contemporary trade magazine more than a typical SaaS sans. **ibmPlexMono** is paired in for two roles only: technical eyebrows and small-caps captions. Helvetica appears in the extracted token data but is a fallback artefact, not a brand specimen.
 
 ### Hierarchy
 
-| Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
-|------|------|------|--------|-------------|----------------|-------|
-| Display / Hero | waldenburgNormal | 112px (7rem) | 400 | 1.00 (tight) | -4.48px | Maximum impact, compressed tracking |
-| Hero Secondary | waldenburgNormal | 72px (4.5rem) | 400 | 1.05 (tight) | -2.88px | Large section headers |
-| Section Heading | waldenburgNormal | 48px (3rem) | 400 | 1.08 (tight) | -1.68px | Primary section anchors |
-| Heading Large | waldenburgNormal | 38px (2.38rem) | 400 | 1.10 (tight) | -1.14px | Feature section titles |
-| Heading Medium | waldenburgNormal | 32px (2rem) | 425 | 1.24 (tight) | -0.32px | Card titles, subsection headers |
-| Heading Small | waldenburgNormal | 24px (1.5rem) | 425 | 1.24 (tight) | -0.24px | Smaller feature headings |
-| Subheading | waldenburgNormal | 20px (1.25rem) | 425 | 1.13 (tight) | -0.2px | Sub-section markers |
-| Body Large | waldenburgNormal | 18px (1.13rem) | 400 | 1.50 | -0.18px | Intro paragraphs, descriptions |
-| Body | waldenburgNormal | 16px (1rem) | 400 | 1.50 | normal | Standard body text |
-| Body Small | waldenburgNormal | 15px (0.94rem) | 400 | 1.50 | -0.15px | Compact body text |
-| Caption | waldenburgNormal | 13px (0.81rem) | 400-500 | 1.30-1.50 | -0.13px | Metadata, descriptions, tags |
-| Small Caption | waldenburgNormal | 12px (0.75rem) | 400 | 1.50 | -0.12px | Footnotes, timestamps |
-| Micro / Label | waldenburgNormal | 11px (0.69rem) | 500-600 | 1.00-1.50 | normal | Uppercase labels, tiny badges |
-| Code Body | IBM Plex Mono | 15px (0.94rem) | 400 | 1.50 | normal | Code blocks, technical content |
-| Code Caption | IBM Plex Mono | 13px (0.81rem) | 400-500 | 1.30-1.50 | normal | Inline code, small technical labels |
-| Code Micro | IBM Plex Mono | 10-12px | 400 | 1.30-1.50 | normal | Tiny code labels, uppercase tags |
+| Token | Size | Weight | Line Height | Letter Spacing | Use |
+|---|---|---|---|---|---|
+| `{typography.display-mega}` | 112px | 400 | 1.0 | -4.48px | Page-defining hero ("Structure powers intelligence"); maximum one per page |
+| `{typography.display-xl}` | 72px | 400 | 1.05 | -2.88px | Section-opening editorial display ("Loved by 1M+ users…") |
+| `{typography.display-lg}` | 60px | 400 | 0.8 | 0 | Tightly-leaded display used for emphatic sub-section heads |
+| `{typography.display-md}` | 48px | 400 | 1.08 | -1.68px | Standard section headlines, pricing tier amounts |
+| `{typography.display-sm}` | 38px | 400 | 1.10 | -1.14px | Sub-section heads, content-agent feature headers |
+| `{typography.heading-md}` | 32px | 425 | 1.13 | -0.32px | Card titles, large list-item labels |
+| `{typography.heading-sm}` | 24px | 400 | 1.10 | -0.24px | Small section labels, feature-card titles |
+| `{typography.subtitle}` | 18px | 400 | 1.5 | -0.18px | Hero sub-copy, lead paragraphs |
+| `{typography.body}` | 16px | 400 | 1.5 | 0 | Default running body across both themes |
+| `{typography.body-sm}` | 15px | 400 | 1.5 | -0.15px | Comparison-table cells, mid-density reading copy |
+| `{typography.caption}` | 13px | 400 | 1.5 | 0 | Card captions, list-item meta |
+| `{typography.caption-tight}` | 13px | 500 | 1.3 | -0.13px | Tight metadata, button-sm typography |
+| `{typography.meta}` | 12px | 400 | 1.5 | -0.12px | Footnotes, fine print |
+| `{typography.mono-eyebrow}` | 13px | 400 | 1.5 | 0 | Section eyebrows in IBM Plex Mono |
+| `{typography.mono-caps}` | 11px | 400 | 1.5 | 0 | Small-caps mono labels and footer column heads |
+| `{typography.mono-micro}` | 10px | 400 | 1.3 | 0 | Tag chips and very fine technical labels |
+| `{typography.button-lg}` | 16px | 500 | 1.5 | 0 | Marketing CTA buttons |
+| `{typography.button-sm}` | 13px | 500 | 1.3 | -0.13px | Inline secondary actions, tab buttons |
+| `{typography.button-uppercase}` | 11px | 600 | 1.5 | 0 | Studio app-style toolbar tabs (uppercase) |
 
 ### Principles
-- **Extreme negative tracking at scale**: Display headings at 72px+ use aggressive negative letter-spacing (-2.88px to -4.48px), creating a tight, engineered quality that distinguishes Sanity from looser editorial typography.
-- **Single font, multiple registers**: waldenburgNormal handles both editorial display and functional UI text. The weight range is narrow (400-425 for most, 500-600 only for tiny labels), keeping the voice consistent.
-- **OpenType feature control**: Typography uses deliberate feature settings including `"cv01", "cv11", "cv12", "cv13", "ss07"` for display sizes and `"calt" 0` for body text, fine-tuning character alternates for different contexts.
-- **Tight headings, relaxed body**: Headings use 1.00-1.24 line-height (extremely tight), while body text breathes at 1.50. This contrast creates clear visual hierarchy.
-- **Uppercase for technical labels**: IBM Plex Mono captions and small labels frequently use `text-transform: uppercase` with tight line-heights, creating a "system readout" aesthetic for technical metadata.
+- **One brand sans across every level.** Hierarchy comes from size, weight, and tracking; never from a contrasting display family.
+- **Aggressive negative tracking on display sizes.** -4.48px at 112px tightens the silhouette of huge headlines into something readable as a single visual unit rather than a row of letters.
+- **Mono is exclusively a labelling system.** IBM Plex Mono is reserved for eyebrows, small-caps tags, and technical-feel captions. Never use mono for body running copy.
+- **OpenType features stay enabled across waldenburgNormal display.** `cv01`, `cv11`, `cv12`, `cv13`, `ss07` deliver the single-storey `a`, rounded `t`, soft `g` — these are core to the brand voice. Body sizes drop the OpenType variants and let the default forms render.
 
-## 4. Component Stylings
+### Note on Font Substitutes
+If `waldenburgNormal` is unavailable, **ABC Walden** (commercial) is the closest substitute. **Inter** at the same sizes works as a fallback if the OpenType-feature richness is dropped — pull `letter-spacing` 0.5px tighter at display sizes (-5.0px at 112px) to compensate for Inter's looser default tracking. Keep IBM Plex Mono unchanged — it is open-source and ships with the desired feel.
 
-### Buttons
-
-**Primary CTA (Pill)**
-- Background: Sanity Red (`#f36458`)
-- Text: White (`#ffffff`)
-- Padding: 8px 16px
-- Border Radius: 99999px (full pill)
-- Border: none
-- Hover: Electric Blue (`#0052ef`) background, white text
-- Font: 16px waldenburgNormal, weight 400
-
-**Secondary (Dark Pill)**
-- Background: Near Black (`#0b0b0b`)
-- Text: Silver (`#b9b9b9`)
-- Padding: 8px 12px
-- Border Radius: 99999px (full pill)
-- Border: none
-- Hover: Electric Blue (`#0052ef`) background, white text
-
-**Outlined (Light Pill)**
-- Background: White (`#ffffff`)
-- Text: Near Black (`#0b0b0b`)
-- Padding: 8px
-- Border Radius: 99999px (full pill)
-- Border: 1px solid `#0b0b0b`
-- Hover: Electric Blue (`#0052ef`) background, white text
-
-**Ghost / Subtle**
-- Background: Dark Gray (`#212121`)
-- Text: Silver (`#b9b9b9`)
-- Padding: 0px 12px
-- Border Radius: 5px
-- Border: 1px solid `#212121`
-- Hover: Electric Blue (`#0052ef`) background, white text
-
-**Uppercase Label Button**
-- Font: 11px waldenburgNormal, weight 600, uppercase
-- Background: transparent or `#212121`
-- Text: Silver (`#b9b9b9`)
-- Letter-spacing: normal
-- Used for tab-like navigation and filter controls
-
-### Cards
-
-**Dark Content Card**
-- Background: `#212121`
-- Border: 1px solid `#353535` or `#212121`
-- Border Radius: 6px
-- Padding: 24px
-- Text: White (`#ffffff`) for titles, Silver (`#b9b9b9`) for body
-- Hover: subtle border color shift or elevation change
-
-**Feature Card (Full-bleed)**
-- Background: `#0b0b0b` or full-bleed image/gradient
-- Border: none or 1px solid `#212121`
-- Border Radius: 12px
-- Padding: 32-48px
-- Contains large imagery with overlaid text
-
-### Inputs
-
-**Text Input / Textarea**
-- Background: Near Black (`#0b0b0b`)
-- Text: Silver (`#b9b9b9`)
-- Border: 1px solid `#212121`
-- Padding: 8px 12px
-- Border Radius: 3px
-- Focus: outline with `var(--focus-ring-color)` (blue), 2px solid
-- Focus background: shifts to deep cyan (`#072227`)
-
-**Search Input**
-- Background: `#0b0b0b`
-- Text: Silver (`#b9b9b9`)
-- Padding: 0px 12px
-- Border Radius: 3px
-- Placeholder: Medium Gray (`#797979`)
-
-### Navigation
-
-**Top Navigation**
-- Background: Near Black (`#0b0b0b`) with backdrop blur
-- Height: auto, compact padding
-- Logo: left-aligned, Sanity wordmark
-- Links: waldenburgNormal 16px, Silver (`#b9b9b9`)
-- Link Hover: Electric Blue via `--color-fg-accent-blue`
-- CTA Button: Sanity Red pill button right-aligned
-- Separator: 1px border-bottom `#212121`
-
-**Footer**
-- Background: Near Black (`#0b0b0b`)
-- Multi-column link layout
-- Links: Silver (`#b9b9b9`), hover to blue
-- Section headers: White (`#ffffff`), 13px uppercase IBM Plex Mono
-
-### Badges / Pills
-
-**Neutral Subtle**
-- Background: White (`#ffffff`)
-- Text: Near Black (`#0b0b0b`)
-- Padding: 8px
-- Font: 13px
-- Border Radius: 99999px
-
-**Neutral Filled**
-- Background: Near Black (`#0b0b0b`)
-- Text: White (`#ffffff`)
-- Padding: 8px
-- Font: 13px
-- Border Radius: 99999px
-
-## 5. Layout Principles
+## Layout
 
 ### Spacing System
-Base unit: **8px**
-
-| Token | Value | Usage |
-|-------|-------|-------|
-| space-1 | 1px | Hairline gaps, border-like spacing |
-| space-2 | 2px | Minimal internal padding |
-| space-3 | 4px | Tight component internal spacing |
-| space-4 | 6px | Small element gaps |
-| space-5 | 8px | Base unit -- button padding, input padding, badge padding |
-| space-6 | 12px | Standard component gap, button horizontal padding |
-| space-7 | 16px | Section internal padding, card spacing |
-| space-8 | 24px | Large component padding, card internal spacing |
-| space-9 | 32px | Section padding, container gutters |
-| space-10 | 48px | Large section vertical spacing |
-| space-11 | 64px | Major section breaks |
-| space-12 | 96-120px | Hero vertical padding, maximum section spacing |
+- **Base unit**: 8px, with 4px micro-steps for inline spacing.
+- **Tokens (front matter)**: `{spacing.xxs}` 4px · `{spacing.xs}` 8px · `{spacing.sm}` 12px · `{spacing.md}` 16px · `{spacing.lg}` 24px · `{spacing.xl}` 32px · `{spacing.xxl}` 48px · `{spacing.section}` 64px · `{spacing.section-lg}` 96px.
+- Card internal padding sits at `{spacing.xl}` (32px) on marketing cards and `{spacing.md}` (16px) on Studio-window mockups. Section vertical rhythm uses `{spacing.section-lg}` (96px) between major modules — this is the constant that holds across home, studio, content-agent, and pricing pages.
 
 ### Grid & Container
-- Max content width: ~1440px (inferred from breakpoints)
-- Page gutter: 32px on desktop, 16px on mobile
-- Content sections use full-bleed backgrounds with centered, max-width content
-- Multi-column layouts: 2-3 columns on desktop, single column on mobile
-- Card grids: CSS Grid with consistent gaps (16-24px)
+- Marketing pages render inside a centred container that caps near 1640px on widescreen. The hero typography uses the full container width — display headlines often span the full content area without an enclosing card.
+- Pricing uses a 4-tier column grid (Free / Growth / Enterprise / Custom by typical layout pattern) on widescreen, with the featured tier flipping to `{pricing-card-featured}` polarity. Below the tier grid, the comparison table is a single very-wide table spanning the full container; cells are 16px-padded and alternate between feature label and per-tier check/value.
+- Content-agent uses an irregular asymmetric grid: a left-side text column at ~50% width, right-side feature cards in a 2-up grid below. This breaks the otherwise-symmetric system rhythm to flag the page as a campaign rather than a product page.
+- Studio uses a tight masonry of code-window mockups, each rendered in `{studio-window}` style with sharp `{rounded.app-lg}` corners.
 
 ### Whitespace Philosophy
-Sanity uses aggressive vertical spacing between sections (64-120px) to create breathing room on the dark canvas. Within sections, spacing is tighter (16-32px), creating dense information clusters separated by generous voids. This rhythm gives the page a "slides" quality -- each section feels like its own focused frame.
+The dark canvas does most of the visual work — generous negative space lets the editorial display headlines breathe. Sections are separated by `{spacing.section-lg}` (96px) verticals; cards inside a section use `{spacing.lg}` (24px) gaps. Padding inside marketing cards is `{spacing.xl}` (32px) — slightly more generous than the `{spacing.lg}` typical in B2B SaaS systems, giving cards an editorial-spread feel. The pricing comparison table is the deliberate exception: row padding tightens to `{spacing.md}` (16px) to fit a 30+ row matrix without overwhelming the page.
+
+## Elevation & Depth
+
+| Level | Treatment | Use |
+|---|---|---|
+| Flat (Dark) | `{colors.canvas}` background, no shadow, no border | Default dark-section reading surface |
+| Card (Dark) | `{colors.canvas-soft}` infill on `{colors.canvas}` page, `{rounded.marketing}` corners, optional 1px `{colors.hairline-soft}` border | Feature cards, Studio-window mockups, content-agent tiles |
+| Card (Light) | `{colors.canvas-light}` on `{colors.canvas-paper}` band OR `{colors.canvas-light}` with 1px `{colors.hairline}` border | Pricing cards, marketing-section-light feature tiles |
+| Inverted Featured | `{colors.ink}` on `{colors.canvas-light}` page, white text | Featured pricing tier — the polarity flip is the whole "featured" cue |
+| Brand Surface | `{colors.brand}` fill | Brand-card, content-agent CTA panels, brand-dot |
+| Soft Drop | Subtle `0 4px 24px rgba(0,0,0,0.08)` on light cards only | Resting-state lift on the pricing-card hero panel |
+
+The system avoids heavy drop shadows. Depth is delivered primarily by tonal surface stepping (canvas → canvas-soft → canvas-light) and by the polarity flip between dark and light surfaces. The two extracted shadow values are reserved for very rare lift cues — most cards sit flush.
+
+### Decorative Depth
+- **Polarity flip as drama.** Saniti's strongest depth cue is the inversion between dark and light sections. The eye reads a hard edge between two adjacent sections (one canvas, one canvas-light) as a strong layout statement.
+- **Brand-card flash.** A single feature card filled with `{colors.brand}` mid-section creates a visual anchor without a shadow or border — the colour change is the depth cue.
+
+## Shapes
 
 ### Border Radius Scale
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| radius-xs | 3px | Inputs, textareas, subtle rounding |
-| radius-sm | 4-5px | Secondary buttons, small cards, tags |
-| radius-md | 6px | Standard cards, containers |
-| radius-lg | 12px | Large cards, feature containers, forms |
-| radius-pill | 99999px | Primary buttons, badges, nav pills |
+| Token | Value | Use |
+|---|---|---|
+| `{rounded.none}` | 0px | Comparison table cells, full-width banners |
+| `{rounded.app-xs}` | 3px | Text inputs, textarea, application-style fields |
+| `{rounded.app-sm}` | 4px | Heading-level pill chips, secondary inputs |
+| `{rounded.app-md}` | 5px | Studio toolbar buttons, tab pills, secondary actions |
+| `{rounded.app-lg}` | 6px | Studio window mockups, code blocks |
+| `{rounded.marketing}` | 12px | Feature cards, pricing cards, content-agent panels |
+| `{rounded.full}` | 99999px | Marketing CTAs, badges, brand dot, tag chips |
 
-## 6. Depth & Elevation
+### Photography Geometry
+- **Studio screenshots** are framed inside `{rounded.app-lg}` (6px) windows — chosen to mimic native macOS/Windows application chrome rather than card-rounding, so the screenshots read as "real product."
+- **Content-agent illustrations** are full-bleed `{rounded.marketing}` panels with abstract gradient surfaces.
+- **Avatar/logo lockups** in the partner band are flat black or white wordmarks with no rounding, evenly spaced across a single row.
 
-### Shadow System
+## Components
 
-| Level | Value | Usage |
-|-------|-------|-------|
-| Level 0 (Flat) | none | Default state for most elements -- dark surfaces create depth through color alone |
-| Level 1 (Subtle) | 0px 0px 0px 1px `#212121` | Border-like shadow for minimal containment without visible borders |
-| Level 2 (Focus) | 0 0 0 2px `var(--color-blue-500)` | Focus ring for inputs and interactive elements |
-| Level 3 (Overlay) | Backdrop blur + semi-transparent dark | Navigation overlay, modal backgrounds |
+### Buttons
 
-### Depth Philosophy
-Sanity's depth system is almost entirely **colorimetric** rather than shadow-based. Elevation is communicated through surface color shifts: `#0b0b0b` (ground) -> `#212121` (elevated) -> `#353535` (prominent) -> `#ffffff` (inverted/highest). This approach is native to dark interfaces where traditional drop shadows would be invisible. The few shadows that exist are ring-based (0px 0px 0px Npx) or blur-based (backdrop-filter) rather than offset shadows, maintaining the flat, precision-engineered aesthetic.
+**`button-primary`** — the marketing CTA on dark sections ("Get Started Free")
+- Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.button-lg}`, padding `{spacing.sm}` × `{spacing.lg}`, rounded `{rounded.full}`, height 44px, with a thin `{colors.ink}` border that paints inside the white pill and reads as a confident edge against the dark canvas.
 
-Border-based containment (1px solid `#212121` or `#353535`) serves as the primary spatial separator, with the border darkness calibrated to be visible but not dominant. The system avoids "floating card" aesthetics -- everything feels mounted to the surface rather than hovering above it.
+**`button-primary-on-light`** — the inverse for light-section heroes
+- Background `{colors.ink}`, text `{colors.on-primary}`, identical token set otherwise.
 
-## 7. Do's and Don'ts
+**`button-brand`** — the rare brand-coloured CTA reserved for "Contact Sales" or peak-priority prompts
+- Background `{colors.brand}`, text `{colors.ink}`, type `{typography.button-lg}`, rounded `{rounded.full}`, padding `{spacing.sm}` × `{spacing.lg}`.
+
+**`button-secondary-dark`** — secondary actions on dark surfaces
+- Background `{colors.canvas-soft}`, text `{colors.ash}`, type `{typography.button-sm}`, rounded `{rounded.app-md}`, padding `{spacing.sm}`, height 36px, 1px `{colors.hairline-soft}` border.
+
+**`button-ghost-dark`** — text-style links on dark
+- Background `{colors.canvas}` (transparent), text `{colors.ash}`, type `{typography.button-sm}`, rounded `{rounded.full}`.
+
+**`button-app-tab`** — Studio-style toolbar tabs (visible inside Studio screenshot mockups)
+- Background `{colors.canvas-soft}`, text `{colors.ash}`, type `{typography.button-uppercase}` (uppercase IBM Plex Mono-feel), rounded `{rounded.app-sm}`, padding `{spacing.xs}`, height 32px.
+
+### Navigation
+
+**`nav-bar-dark`** — the persistent dark top bar
+- Background `{colors.canvas}`, height ~64px, padding `{spacing.lg}` horizontal, white text.
+- Layout: red `brand-dot` + `Saniti` wordmark left → centred primary menu (Product, Solutions, Resources, Customers, Pricing, Docs) → right cluster (`Sign In` text link, `Book a Demo` `{button-secondary-dark}`, `Get Started Free` `{button-primary}`).
+- Sticky on scroll, no border division — the bar is held to the page only by the colour contrast against any light section that scrolls underneath.
+
+**`nav-link`** — primary menu items
+- Background `{colors.canvas}`, text `{colors.on-primary}`, type `{typography.button-lg}`, padding `{spacing.xs}` vertical.
+
+### Cards & Containers
+
+**`hero-display`** — the homepage display lockup
+- Background `{colors.canvas}`, text `{colors.on-primary}`, type `{typography.display-mega}`. The hero is type-only on the home page; supplementary subtitle, lead paragraph, and primary CTA stack directly below in `{spacing.lg}` increments.
+
+**`feature-card-dark`** — the standard dark-section feature card
+- Background `{colors.canvas-soft}`, text `{colors.on-primary}`, padding `{spacing.xl}`, rounded `{rounded.marketing}`, with optional 1px `{colors.hairline-soft}` border.
+- Internal stack: optional `{typography.mono-eyebrow}` label → `{typography.heading-sm}` title → `{typography.body}` description → optional `{button-ghost-dark}` link.
+
+**`feature-card-brand`** — the rare brand-coloured highlight card
+- Background `{colors.brand}`, text `{colors.ink}`, padding `{spacing.xl}`, rounded `{rounded.marketing}`. Used at most once per page to anchor the eye.
+
+**`feature-card-light`** — light-section feature tile
+- Background `{colors.canvas-light}`, text `{colors.ink}`, padding `{spacing.xl}`, rounded `{rounded.marketing}`, 1px `{colors.hairline}` border.
+
+**`pricing-card`** — standard tier card on the pricing page
+- Background `{colors.canvas-light}`, text `{colors.ink}`, padding `{spacing.xl}`, rounded `{rounded.marketing}`, 1px `{colors.hairline}` border.
+- Internal stack: tier name (`{typography.heading-md}`) → `{typography.body}` description → tier price (`{pricing-amount}`) → primary CTA (`{button-primary-on-light}`) → feature list (`{typography.body-sm}` bullets with `{colors.success}` checks).
+
+**`pricing-card-featured`** — the featured tier
+- Background `{colors.ink}` (full inversion), text `{colors.on-primary}`, otherwise identical layout. The black fill is the badge — no ribbon, no border treatment.
+
+**`pricing-amount`** — the dollar/period display
+- Background inherited, text `{colors.ink}` or `{colors.on-primary}`, type `{typography.display-md}`.
+
+**`comparison-table-row`** — the rows of the long feature-comparison table on pricing
+- Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body-sm}`, padding `{spacing.md}`, rule `{colors.hairline}` between rows. Cells alternate: feature label (left) + per-tier value (centre, repeating).
+
+**`studio-window`** — the framed Studio app screenshot
+- Background `{colors.canvas-soft}`, padding `{spacing.md}`, rounded `{rounded.app-lg}` (6px), 1px `{colors.hairline-soft}` border. Internal: a thin chrome bar with three coloured dots (red/yellow/green macOS-style) in the top-left, then the Studio UI screenshot.
+
+**`brand-dot`** — the small `{colors.brand}` filled circle paired with the `Saniti` wordmark
+- Background `{colors.brand}`, size 12px, rounded `{rounded.full}`. Always sits 8px to the left of the wordmark.
+
+### Inputs & Forms
+
+**`text-input`** — light-mode text input (pricing form, contact form)
+- Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.body}`, rounded `{rounded.app-xs}` (3px), padding `{spacing.sm}` × `{spacing.md}`, height 44px, 1px `{colors.hairline}` border.
+
+**`text-input-dark`** — dark-mode input variant (Studio mockups, content-agent forms)
+- Background `{colors.canvas}`, text `{colors.ash}`, type `{typography.body}`, rounded `{rounded.app-xs}`, padding `{spacing.sm}` × `{spacing.md}`, 1px `{colors.ink-soft}` border.
+
+**`text-input-focused`** — focus state
+- Background `{colors.canvas-light}`, text `{colors.ink}`, 0 outline + 2px `{colors.link-blue}` ring on focus.
+
+**`textarea`** — multi-line variant
+- Background `{colors.canvas}`, text `{colors.ash}`, type `{typography.body}`, rounded `{rounded.app-xs}`, padding `{spacing.xs}` × `{spacing.sm}`, 1px `{colors.ink-soft}` border.
+
+**`badge-neutral`** — small white pill ("New", "Beta")
+- Background `{colors.canvas-light}`, text `{colors.ink}`, type `{typography.caption}`, rounded `{rounded.full}`, padding `{spacing.xs}`.
+
+**`badge-filled`** — small black pill
+- Background `{colors.ink}`, text `{colors.on-primary}`, type `{typography.caption}`, rounded `{rounded.full}`.
+
+**`alert-banner`** — soft-blue informational notice
+- Background `{colors.surface-blue-bg}`, text `{colors.ink}`, type `{typography.body-sm}`, rounded `{rounded.app-lg}`, padding `{spacing.md}`.
+
+### Footer
+
+**`footer`** — the dark terminal surface
+- Background `{colors.canvas}`, text `{colors.on-primary}`, padding `{spacing.section}` vertical, `{spacing.lg}` horizontal.
+- Layout: 6-column link grid → bottom strip with the `brand-dot` + `Saniti` wordmark right-aligned and copyright/social links left-aligned.
+
+**`footer-eyebrow`** — column heading
+- Background `{colors.canvas}`, text `{colors.mute}`, type `{typography.mono-caps}` (small-caps IBM Plex Mono). The mono-eyebrow at the footer is what locks in the technical-trade-journal feel.
+
+**`footer-link`** — link-list items
+- Background `{colors.canvas}`, text `{colors.ash}`, type `{typography.caption}`.
+
+### Section-level Components
+
+**`marketing-section-dark`** — full-width dark band
+- Background `{colors.canvas}`, text `{colors.on-primary}`, padding `{spacing.section-lg}` vertical.
+
+**`marketing-section-light`** — full-width light band
+- Background `{colors.canvas-light}`, text `{colors.ink}`, padding `{spacing.section-lg}` vertical.
+
+**`marketing-section-paper`** — warm-grey alternate light band
+- Background `{colors.canvas-paper}`, text `{colors.ink}`, padding `{spacing.section-lg}` vertical.
+
+### Signature Components
+
+**Polarity-Flip Section Rhythm** — the most distinctive part of Saniti's marketing layout. Sections alternate between `{marketing-section-dark}` and `{marketing-section-light}` (or `{marketing-section-paper}`) without any transitional surface. The hard cut is the system's most-used depth cue and what gives the long marketing pages their cinematic, scroll-driven cadence.
+
+**Editorial Display + Mono Eyebrow** — the canonical headline lockup. `{typography.mono-eyebrow}` (IBM Plex Mono, 13px) sits above a 48–112px `{typography.display-md}` to `{typography.display-mega}` headline. The mono caption is what marks the system as developer-platform-aware rather than generic-marketing.
+
+**Studio Window Mockup** — every Studio-product screenshot is framed inside the `{studio-window}` chrome. It is the system's main recurring visual asset and what carries the "this is a real product, not a marketing diagram" signal.
+
+## Do's and Don'ts
 
 ### Do
-- Use the achromatic gray scale as the foundation -- maintain pure neutral discipline with no warm/cool tinting
-- Apply Electric Blue (`#0052ef`) consistently as the universal hover/active state across all interactive elements
-- Use extreme negative letter-spacing (-2px to -4.48px) on display headings 48px and above
-- Keep primary CTAs as full-pill shapes (99999px radius) with the coral-red (`#f36458`)
-- Use IBM Plex Mono uppercase for technical labels, tags, and system metadata
-- Communicate depth through surface color (dark-to-light) rather than shadows
-- Maintain generous vertical section spacing (64-120px) on the dark canvas
-- Use `"cv01", "cv11", "cv12", "cv13", "ss07"` OpenType features for display typography
+- Run dark-mode marketing sections (`{marketing-section-dark}`) as the brand's default voice; use `{marketing-section-light}` for commercial/comparison surfaces (pricing, integrations matrix).
+- Pair every editorial display headline with a `{typography.mono-eyebrow}` label above it — the lockup is signature.
+- Reserve `{colors.brand}` for one CTA or accent surface per viewport. The colour's power comes from scarcity.
+- Use `{rounded.full}` pills for marketing CTAs and `{rounded.app-*}` 3–6px corners for application-style elements (inputs, Studio mockups). Mixing the two corner languages is intentional — it is what differentiates "marketing" from "product UI" in Saniti's voice.
+- Set display headlines (>48px) with the OpenType variants `cv01, cv11, cv12, cv13, ss07` enabled — the alternates are core to the brand letterforms.
+- Use the polarity flip (dark → light) as the section divider rather than a horizontal rule or background gradient.
+- Pair the brand-dot with the `Saniti` wordmark whenever the wordmark appears at >24px size.
 
 ### Don't
-- Don't introduce warm or cool color tints to the neutral scale -- Sanity's grays are pure achromatic
-- Don't use drop shadows for elevation -- dark interfaces demand colorimetric depth
-- Don't apply border-radius between 13px and 99998px -- the system jumps from 12px (large card) directly to pill (99999px)
-- Don't mix the coral-red CTA with the electric blue interactive color in the same element
-- Don't use heavy font weights (700+) -- the system maxes out at 600 and only for 11px uppercase labels
-- Don't place light text on light surfaces or dark text on dark surfaces without checking the gray-on-gray contrast ratio
-- Don't use traditional offset box-shadows -- ring shadows (0 0 0 Npx) or border-based containment only
-- Don't break the tight line-height on headings -- 1.00-1.24 is the range, never go to 1.5+ for display text
+- Don't use `{colors.brand}` as a background for dark-mode body sections — it must remain a quiet accent, not a section colour.
+- Don't introduce additional accent hues (purple, teal, magenta gradients). Saniti's chromatic story is monochrome plus coral-red.
+- Don't apply OpenType variants to body running text — keep them on display sizes only. Mixing modes makes the page feel typographically loud.
+- Don't use IBM Plex Mono for body or headline text. Mono is reserved for eyebrows, captions, and small-caps labels.
+- Don't add a "Most Popular" badge to the featured pricing tier. The polarity inversion (`{pricing-card-featured}`) is the badge.
+- Don't break headings into mixed-weight contrast (light + bold). Every heading is regular weight (400) — let tracking carry the silhouette.
+- Don't replace the `brand-dot` with a logo glyph in the navigation. The dot + wordmark pairing is the system's primary identification mark.
 
-## 8. Responsive Behavior
+## Responsive Behavior
 
 ### Breakpoints
 
-| Name | Width | Behavior |
-|------|-------|----------|
-| Desktop XL | >= 1640px | Full layout, maximum content width |
-| Desktop | >= 1440px | Standard desktop layout |
-| Desktop Compact | >= 1200px | Slightly condensed desktop |
-| Laptop | >= 1100px | Reduced column widths |
-| Tablet Landscape | >= 960px | 2-column layouts begin collapsing |
-| Tablet | >= 768px | Transition zone, some elements stack |
-| Mobile Large | >= 720px | Near-tablet layout |
-| Mobile | >= 480px | Single-column, stacked layout |
-| Mobile Small | >= 376px | Minimum supported width |
+| Name | Width | Key Changes |
+|---|---|---|
+| 2xl | 1640px | Full editorial container; pricing 4-tier grid wide; comparison table single-row layout |
+| xl | 1440px | Container slightly tightens; `{typography.display-mega}` may step down to 96px |
+| lg | 1200px | Default desktop reading view |
+| md | 1100px | Pricing 4-tier grid still 4-up but tier text density tightens |
+| sm | 960px | Pricing collapses to 2 columns of tiers; nav primary menu collapses to hamburger above this |
+| xs | 768px | Section padding drops from `{spacing.section-lg}` to `{spacing.section}`; display sizes step down universally |
+| xxs | 480px | Single-column reading; `{typography.display-mega}` drops to ~64px; pricing tiers stack 1-up; comparison table converts to per-tier accordion |
+| xxxs | 376px | Footer 6-column grid collapses to 2-column; brand-dot scales to 10px |
+
+### Touch Targets
+- `{button-primary}` is 44px tall — meets WCAG AAA touch target. On mobile the height grows to 48px.
+- `{button-secondary-dark}` is 36px on desktop; expands to 44px on mobile to maintain target compliance.
+- `{nav-link}` items receive `{spacing.sm}` vertical padding inside the mobile menu, expanding the tap target without resizing the type.
 
 ### Collapsing Strategy
-- **Navigation**: Horizontal links collapse to hamburger menu below 768px
-- **Hero typography**: Scales from 112px -> 72px -> 48px -> 38px across breakpoints, maintaining tight letter-spacing ratios
-- **Grid layouts**: 3-column -> 2-column at ~960px, single-column below 768px
-- **Card grids**: Horizontal scrolling on mobile instead of wrapping (preserving card aspect ratios)
-- **Section spacing**: Vertical padding reduces by ~40% on mobile (120px -> 64px -> 48px)
-- **Button sizing**: CTA pills maintain padding but reduce font size; ghost buttons stay fixed
-- **Code blocks**: Horizontal scroll with preserved monospace formatting
+- **Nav.** Centred desktop menu collapses into a hamburger that opens an overlay sheet at < 960px; the right-side `{button-primary}` "Get Started Free" stays visible above the hamburger.
+- **Hero.** The 112px `{typography.display-mega}` steps down to 64px at xxs; tracking proportionally relaxes (-1.92px instead of -4.48px) to remain readable at smaller absolute sizes.
+- **Pricing tier grid.** 4-up → 2-up → 1-up. The featured-tier inversion is preserved across all breakpoints.
+- **Comparison table.** At xxs, the wide matrix transforms into a per-tier accordion: tap a tier name, expand its full feature list. The polarity rules (alternating row fills) carry over.
+- **Section polarity flips.** Preserved at every breakpoint — the dark/light cadence is structural to the brand voice and never collapses.
 
-### Mobile-Specific Adjustments
-- Full-bleed sections extend edge-to-edge with 16px internal gutters
-- Touch targets: minimum 44px for all interactive elements
-- Heading letter-spacing relaxes slightly at mobile sizes (less aggressive negative tracking)
-- Image containers switch from fixed aspect ratios to full-width with auto height
+### Image Behavior
+- `{studio-window}` mockups preserve their `{rounded.app-lg}` framing at every breakpoint. On xxs, they switch to a single-column stack and may horizontal-scroll inside the window if the embedded UI doesn't compress.
+- Hero atmospheric backgrounds (when present on content-agent and select feature pages) use a tighter mobile crop so the focal subject stays centred.
+- Partner-row wordmarks reflow to a 3-up grid at sm and 2-up at xxs.
 
-## 9. Agent Prompt Guide
+## Iteration Guide
 
-### Quick Color Reference
-```
-Background:      #0b0b0b (near-black canvas)
-Surface:         #212121 (elevated cards/containers)
-Border:          #353535 (visible) / #212121 (subtle)
-Text Primary:    #ffffff (white on dark)
-Text Secondary:  #b9b9b9 (silver on dark)
-Text Tertiary:   #797979 (medium gray)
-CTA:             #f36458 (coral-red)
-Interactive:     #0052ef (electric blue, all hovers)
-Success:         #19d600 (green, sRGB fallback)
-Error:           #dd0000 (pure red)
-Light Surface:   #ededed / #ffffff (inverted sections)
-```
-
-### Example Prompts
-
-**Landing page section:**
-"Create a feature section with a near-black (#0b0b0b) background. Use a 48px heading in Inter with -1.68px letter-spacing, white text. Below it, 16px body text in #b9b9b9 with 1.50 line-height. Include a coral-red (#f36458) pill button with white text and a secondary dark (#0b0b0b) pill button with #b9b9b9 text. Both buttons hover to #0052ef blue."
-
-**Card grid:**
-"Build a 3-column card grid on a #0b0b0b background. Each card has a #212121 surface, 1px solid #353535 border, 6px border-radius, and 24px padding. Card titles are 24px white with -0.24px letter-spacing. Body text is 13px #b9b9b9. Add a 13px IBM Plex Mono uppercase tag in #797979 at the top of each card."
-
-**Form section:**
-"Design a contact form on a #0b0b0b background. Inputs have #0b0b0b background, 1px solid #212121 border, 3px border-radius, 8px 12px padding, and #b9b9b9 placeholder text. Focus state shows a 2px blue (#0052ef) ring. Submit button is a full-width coral-red (#f36458) pill. Include a 13px #797979 helper text below each field."
-
-**Navigation bar:**
-"Create a sticky top navigation on #0b0b0b with backdrop blur. Left: brand text in 15px white. Center/right: nav links in 16px #b9b9b9 that hover to blue. Far right: a coral-red (#f36458) pill CTA button. Bottom border: 1px solid #212121."
-
-### Iteration Guide
-1. **Start dark**: Begin with `#0b0b0b` background, `#ffffff` primary text, `#b9b9b9` secondary text
-2. **Add structure**: Use `#212121` surfaces and `#353535` borders for containment -- no shadows
-3. **Apply typography**: Inter (or Space Grotesk) with tight letter-spacing on headings, 1.50 line-height on body
-4. **Color punctuation**: Add `#f36458` for CTAs and `#0052ef` for all hover/interactive states
-5. **Refine spacing**: 8px base unit, 24-32px within sections, 64-120px between sections
-6. **Technical details**: Add IBM Plex Mono uppercase labels for tags and metadata
-7. **Polish**: Ensure all interactive elements hover to `#0052ef`, all buttons are pills or subtle 5px radius, borders are hairline (1px)
+1. Focus on ONE component at a time. Start with `{hero-display}`, `{button-primary}`, and `{nav-bar-dark}` — they appear on every dark-mode page and anchor the brand voice.
+2. Reference component names and tokens directly (`{colors.brand}`, `{button-primary-on-light}`, `{rounded.full}`) — do not paraphrase or substitute hex values.
+3. Run `npx @google/design.md lint DESIGN.md` after edits.
+4. Add new variants as separate `components:` entries (`-dark`, `-on-light`, `-featured`). Never bury them inside prose.
+5. Default body copy to `{typography.body}`. Reserve `{typography.mono-eyebrow}` and `{typography.mono-caps}` for IBM Plex Mono labels only; never use mono for headlines.
+6. Keep `{colors.brand}` scarce — at most one brand-coloured CTA or surface per viewport. If a section already has a `{button-brand}` action, secondary actions step down to `{button-secondary-dark}`.
+7. When introducing a new section, start by deciding its polarity (`{marketing-section-dark}` vs light vs paper). The polarity choice drives every other token decision in the section.

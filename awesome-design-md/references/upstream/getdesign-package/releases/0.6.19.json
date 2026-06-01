@@ -1,0 +1,583 @@
+{
+  "cliVersion": "0.6.19",
+  "generatedAt": "2026-05-12T11:34:28.990Z",
+  "templateCount": 72,
+  "templates": [
+    {
+      "brand": "airbnb",
+      "file": "airbnb.md",
+      "description": "Travel marketplace. Warm coral accent, photography-driven, rounded UI.",
+      "templateHash": "sha256:f85afd9d584a868b0b45452acf14c1e696e6b5bfd001cc75bbb068f3d19fc36e",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "airtable",
+      "file": "airtable.md",
+      "description": "Spreadsheet-database hybrid. Colorful, friendly, structured data aesthetic.",
+      "templateHash": "sha256:65b761e78e3d841e2aa3dd395091c900cd50f1962d629058a85ae41aa8141854",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "apple",
+      "file": "apple.md",
+      "description": "Consumer electronics. Premium white space, SF Pro, cinematic imagery.",
+      "templateHash": "sha256:3f977081e2ed94317deeb1ca179e3087670eb55391a296d24cab10c8feba1f69",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "binance",
+      "file": "binance.md",
+      "description": "Crypto exchange. Bold yellow accent on monochrome, trading-floor urgency.",
+      "templateHash": "sha256:bbba2fc59ffd971e79a2ccb2cff043d991e9761239647204c8984687ed9ecc87",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "bmw",
+      "file": "bmw.md",
+      "description": "Luxury automotive. Dark premium surfaces, precise German engineering aesthetic.",
+      "templateHash": "sha256:e62e31dbc77111fbd588f4e05d4f2fc3f80c5a8ff97d69e6362f9f2ba7207779",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "bmw-m",
+      "file": "bmw-m.md",
+      "description": "Motorsport automotive. Pure black canvas, M tricolor stripe accents, full-bleed photography.",
+      "templateHash": "sha256:414479df08d6134dfa5207b7c50d4e3eeb500d0279b014dc01bc604c96e347b8",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "bugatti",
+      "file": "bugatti.md",
+      "description": "Hypercar brand. Cinema-black canvas, monochrome austerity, monumental display type.",
+      "templateHash": "sha256:76026532eacfe8ccdafccc89cc75e2d9dd5f140c53b2bb52f64684b14ae5813e",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "cal",
+      "file": "cal.md",
+      "description": "Open-source scheduling. Clean neutral UI, developer-oriented simplicity.",
+      "templateHash": "sha256:a2c6a7029b69d43b8fc144adba604de33fef71e9769661005b9488d9aa8e719c",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "claude",
+      "file": "claude.md",
+      "description": "Anthropic's AI assistant. Warm terracotta accent, clean editorial layout.",
+      "templateHash": "sha256:bc7129540009dddcc1c006b89387b806fc73751d10d3de6a44f549bd2cfebfec",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "clay",
+      "file": "clay.md",
+      "description": "Creative agency. Organic shapes, soft gradients, art-directed layout.",
+      "templateHash": "sha256:67685b3a8d1aea2e04fcafc4a88ba1658e7d1a7482da4078dd5ba2aac84a7d47",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "clickhouse",
+      "file": "clickhouse.md",
+      "description": "Fast analytics database. Yellow-accented, technical documentation style.",
+      "templateHash": "sha256:93831fcb42089dec2d06505eb5cd116d7085d109c10aa3e9360c6028e5e5263c",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "cohere",
+      "file": "cohere.md",
+      "description": "Enterprise AI platform. Vibrant gradients, data-rich dashboard aesthetic.",
+      "templateHash": "sha256:2e4110dbbc6f4d89671780b5762f5cfb37a3572210e16a17ad5e138a3c1a99a0",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "coinbase",
+      "file": "coinbase.md",
+      "description": "Crypto exchange. Clean blue identity, trust-focused, institutional feel.",
+      "templateHash": "sha256:e677e203947c20dad20569d60cd8b6fd0f2b74466915d47069f5b9fa3fa65e6d",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "composio",
+      "file": "composio.md",
+      "description": "Tool integration platform. Modern dark with colorful integration icons.",
+      "templateHash": "sha256:ba44423f5c5648a6605af50bdcc6bb006611613135c858a5ca506a3131e7217b",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "cursor",
+      "file": "cursor.md",
+      "description": "AI-first code editor. Sleek dark interface, gradient accents.",
+      "templateHash": "sha256:83647e40e81f24277bae9c93a8562f887aa47490b4712144139692ae8892b5fe",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "elevenlabs",
+      "file": "elevenlabs.md",
+      "description": "AI voice platform. Dark cinematic UI, audio-waveform aesthetics.",
+      "templateHash": "sha256:7bc15532c17b38a97bdb39580e6d5c6ae6f2ffe1d156b320bb807a1a9f9d3c9a",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "expo",
+      "file": "expo.md",
+      "description": "React Native platform. Dark theme, tight letter-spacing, code-centric.",
+      "templateHash": "sha256:682eaf4e01e517f816d8754397b3a7add1b583b0d2b41bb38e3469bfb07b69fe",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "ferrari",
+      "file": "ferrari.md",
+      "description": "Luxury automotive. Chiaroscuro editorial, Ferrari Red accents, cinematic black.",
+      "templateHash": "sha256:7d39c0cba7082855b701e63558bbd11812466b425362b3f6a4bc3d584bf342a3",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "figma",
+      "file": "figma.md",
+      "description": "Collaborative design tool. Vibrant multi-color, playful yet professional.",
+      "templateHash": "sha256:6a26d719701b5c647f3e4f34f97b0ba3fbe4006392decdae756718b88397d873",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "framer",
+      "file": "framer.md",
+      "description": "Website builder. Bold black and blue, motion-first, design-forward.",
+      "templateHash": "sha256:0f5bace0ca5cb9d7b7fa0745798b3d4f93e9c3e1a1d2d82f85dde20055a43012",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "hashicorp",
+      "file": "hashicorp.md",
+      "description": "Infrastructure automation. Enterprise-clean, black and white.",
+      "templateHash": "sha256:d7db8ee01c6bafc198527abd31b6a434087fcbb5f64aede31d0d188072f5240d",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "hp",
+      "file": "hp.md",
+      "description": "Consumer electronics catalog. White canvas with electric blue accent, angular chevron motifs.",
+      "templateHash": "sha256:83891759ee603e5f2ff2f1af010a0df0d94bf3e51f3b254c7adc1c7edaa07300",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "ibm",
+      "file": "ibm.md",
+      "description": "Enterprise technology. Carbon design system, structured blue palette.",
+      "templateHash": "sha256:7c76f5634bae8b35f5a9b0c4b9169186c5441ec9ef10653e7cacacffaaeb2b75",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "intercom",
+      "file": "intercom.md",
+      "description": "Customer messaging. Friendly blue palette, conversational UI patterns.",
+      "templateHash": "sha256:24a48b4d749969bd05106608c38250316f7bb380ac28e1b04fe040b4979061b2",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "kraken",
+      "file": "kraken.md",
+      "description": "Crypto trading. Purple-accented dark UI, data-dense dashboards.",
+      "templateHash": "sha256:41bcbd5642c926a549f0d50f1151484c5776b4536233240c8415cfb79bcf1f38",
+      "sourceCommit": "d2a7eb2d1e4ca5f5272be4bec46a5f35f7f01edd",
+      "sourceUpdatedAt": "2026-04-09T18:04:01+03:00"
+    },
+    {
+      "brand": "lamborghini",
+      "file": "lamborghini.md",
+      "description": "Supercar brand. True black surfaces, gold accents, dramatic uppercase typography.",
+      "templateHash": "sha256:9aa68c53b481a0befdf72859db5625f85454122294509989aa58414aaee04b34",
+      "sourceCommit": "d2a7eb2d1e4ca5f5272be4bec46a5f35f7f01edd",
+      "sourceUpdatedAt": "2026-04-09T18:04:01+03:00"
+    },
+    {
+      "brand": "linear.app",
+      "file": "linear.app.md",
+      "description": "Project management. Ultra-minimal, precise, purple accent.",
+      "templateHash": "sha256:4b39e0b86c3c2c44c2d6b0e01882eafdbe62ef45373c5b13677641fb4f00cc10",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "lovable",
+      "file": "lovable.md",
+      "description": "AI full-stack builder. Playful gradients, friendly dev aesthetic.",
+      "templateHash": "sha256:92790895c833104072643929ba56ebbf42c8f88ffb7bff1926462545d0ace6c7",
+      "sourceCommit": "d2a7eb2d1e4ca5f5272be4bec46a5f35f7f01edd",
+      "sourceUpdatedAt": "2026-04-09T18:04:01+03:00"
+    },
+    {
+      "brand": "mastercard",
+      "file": "mastercard.md",
+      "description": "Global payments network. Warm cream canvas, orbital pill shapes, editorial warmth.",
+      "templateHash": "sha256:e76ceaa187f43bd24b8338d2b2314e71e9225b36492e40f32a55782281a10437",
+      "sourceCommit": "a5d0fd2b949eabae5af3caaa2640af48b05004ff",
+      "sourceUpdatedAt": "2026-04-16T11:35:45+03:00"
+    },
+    {
+      "brand": "meta",
+      "file": "meta.md",
+      "description": "Tech retail store. Photography-first, binary light/dark surfaces, Meta Blue CTAs.",
+      "templateHash": "sha256:8a6a74fb1809dc9957c2a5479b419291c2093d9cfdea00cc46ff3198d7136778",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "minimax",
+      "file": "minimax.md",
+      "description": "AI model provider. Bold dark interface with neon accents.",
+      "templateHash": "sha256:ebe2a5cc44a1a9cb4ca6dc4927130ed9255423823566c1eb46231912a03ed8ca",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "mintlify",
+      "file": "mintlify.md",
+      "description": "Documentation platform. Clean, green-accented, reading-optimized.",
+      "templateHash": "sha256:62ed81e675f25525b0c7cab10aa1cbd97ae916be266b23f32164e9ab69a0e888",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "miro",
+      "file": "miro.md",
+      "description": "Visual collaboration. Bright yellow accent, infinite canvas aesthetic.",
+      "templateHash": "sha256:182c82c7d7ee39624f4bf4733d9f907dbfcdd7777f9ddb14d51048ff9fdd4f0e",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "mistral.ai",
+      "file": "mistral.ai.md",
+      "description": "Open-weight LLM provider. French-engineered minimalism, purple-toned.",
+      "templateHash": "sha256:e0be88c8d9be6ae8cc4a45d803947498ec0568165fe02da48c3aeb061bb89511",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "mongodb",
+      "file": "mongodb.md",
+      "description": "Document database. Green leaf branding, developer documentation focus.",
+      "templateHash": "sha256:29462c1d0892c774d0a55efcac6e11f0133789e03733d4730cc3084604be5fab",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "nike",
+      "file": "nike.md",
+      "description": "Athletic retail. Monochrome UI, massive uppercase type, full-bleed photography.",
+      "templateHash": "sha256:045cdfe7cfc55a86ff3eb0e49378317ebdaf9d3972d1418a2fd98e8676547faa",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "notion",
+      "file": "notion.md",
+      "description": "All-in-one workspace. Warm minimalism, serif headings, soft surfaces.",
+      "templateHash": "sha256:e8e32ccd3c68dc9641b02fca9d19f4e4b48b0dcce1d89c6ed773816b09a523aa",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "nvidia",
+      "file": "nvidia.md",
+      "description": "GPU computing. Green-black energy, technical power aesthetic.",
+      "templateHash": "sha256:a4a1dbf07b35191a921a255024d480e039514b03dc016a9d7075a7cc1703f356",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "ollama",
+      "file": "ollama.md",
+      "description": "Run LLMs locally. Terminal-first, monochrome simplicity.",
+      "templateHash": "sha256:477cdc84970ef2f6cfabf6edc3db4b1c5aa5711f50fab409653c21bb9b8149a0",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "opencode.ai",
+      "file": "opencode.ai.md",
+      "description": "AI coding platform. Developer-centric dark theme.",
+      "templateHash": "sha256:1afd9f62a1fe3cb31192f7fbc459215cd630fb48c90a92163bcc328b3a9f144b",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "pinterest",
+      "file": "pinterest.md",
+      "description": "Visual discovery. Red accent, masonry grid, image-first.",
+      "templateHash": "sha256:958096a3746130f0e3acd1980b75bce56ed4d5e33c83a324afc77122dc924eb2",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "playstation",
+      "file": "playstation.md",
+      "description": "Gaming console retail. Three-surface channel layout, quiet-authority display type, cyan hover-scale.",
+      "templateHash": "sha256:40f37cdf110d946f5cf125bf58b3adf63266fb31e6bf5de0add26ef629afedaf",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "posthog",
+      "file": "posthog.md",
+      "description": "Product analytics. Playful hedgehog branding, developer-friendly dark UI.",
+      "templateHash": "sha256:95cdc74882b2ba805e4a07477f4aead20b093a83ebabb07c7a587af8d5fa640e",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "raycast",
+      "file": "raycast.md",
+      "description": "Productivity launcher. Sleek dark chrome, vibrant gradient accents.",
+      "templateHash": "sha256:e42abd391db4a33dadf922d9f81a06b8d3b60de2a379c26398bacd52033f0cf2",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "renault",
+      "file": "renault.md",
+      "description": "French automotive. Vibrant aurora gradients, NouvelR typography, bold energy.",
+      "templateHash": "sha256:4b7d6e8aa5213a7c6c70a69b30e17294d37d6c261658547a1b343645a5d3d4e9",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "replicate",
+      "file": "replicate.md",
+      "description": "Run ML models via API. Clean white canvas, code-forward.",
+      "templateHash": "sha256:0d860442d720e6f2e48a67c2b103f13b79e6e0e4b8b3383aacf91c5c1172ef57",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "resend",
+      "file": "resend.md",
+      "description": "Email API. Minimal dark theme, monospace accents.",
+      "templateHash": "sha256:85716ad6d4338b92fc221f87a70dcfb8a5a207da30fb024e161cdcff49abc00b",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "revolut",
+      "file": "revolut.md",
+      "description": "Digital banking. Sleek dark interface, gradient cards, fintech precision.",
+      "templateHash": "sha256:3c9c8a66f9d83a5eeec86ad05278d7a2677cb92748831daddcdbcf008d76a2a2",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "runwayml",
+      "file": "runwayml.md",
+      "description": "AI video generation. Cinematic dark UI, media-rich layout.",
+      "templateHash": "sha256:cb115fd8a8ff06b4ccfa73ca9a66832cf8366ff8127eb5594fbbc972a0a7bc1b",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "sanity",
+      "file": "sanity.md",
+      "description": "Headless CMS. Red accent, content-first editorial layout.",
+      "templateHash": "sha256:0721d5b4c78a27604f8a1fa12cfad8af8ae5d576faafe0c2e7626d07b362cc01",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "sentry",
+      "file": "sentry.md",
+      "description": "Error monitoring. Dark dashboard, data-dense, pink-purple accent.",
+      "templateHash": "sha256:22ef3b8916f17c062ed3deda812c1de101e6bb855a2bfff889817f5c498723a3",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "shopify",
+      "file": "shopify.md",
+      "description": "E-commerce platform. Dark-first cinematic, neon green accent, ultra-light type.",
+      "templateHash": "sha256:c074179ae2c756d366f80c87a7fe933ed9e4876e200476a242ba1578557d7056",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "slack",
+      "file": "slack.md",
+      "description": "slack design system template.",
+      "templateHash": "sha256:cde3ec8b2cc45a2263ff7fc98e12a2208dbd6e411f8611237bfc21236a74fb14",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "spacex",
+      "file": "spacex.md",
+      "description": "Space technology. Stark black and white, full-bleed imagery, futuristic.",
+      "templateHash": "sha256:605ca5a83baba46b9596badae894312e880916c2082ed06b90341de1d60a2247",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "spotify",
+      "file": "spotify.md",
+      "description": "Music streaming. Vibrant green on dark, bold type, album-art-driven.",
+      "templateHash": "sha256:72e964a6cf551d0603f9854f2f42ee08e97ad4d9e17e037f50f6233508288295",
+      "sourceCommit": "d2a7eb2d1e4ca5f5272be4bec46a5f35f7f01edd",
+      "sourceUpdatedAt": "2026-04-09T18:04:01+03:00"
+    },
+    {
+      "brand": "starbucks",
+      "file": "starbucks.md",
+      "description": "Global coffee retail brand. Four-tier green system, warm cream canvas, full-pill buttons.",
+      "templateHash": "sha256:e20338ee10226c63cf2588207288c08e12d60754a53f681657adaf364dfe8fa7",
+      "sourceCommit": "aa962b9fe7cb2c95a037ce74b435559b2af279f4",
+      "sourceUpdatedAt": "2026-04-20T10:48:31+03:00"
+    },
+    {
+      "brand": "stripe",
+      "file": "stripe.md",
+      "description": "Payment infrastructure. Signature purple gradients, weight-300 elegance.",
+      "templateHash": "sha256:d3b46239f0e52ff727ecbba6b7efb40548dc526d7d73cfa4c0d43edc0770d682",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "supabase",
+      "file": "supabase.md",
+      "description": "Open-source Firebase alternative. Dark emerald theme, code-first.",
+      "templateHash": "sha256:d41efd1c1a44344dd575fcf28eb79b55ce7e8a9d03d643d591f620cd33ee9888",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "superhuman",
+      "file": "superhuman.md",
+      "description": "Fast email client. Premium dark UI, keyboard-first, purple glow.",
+      "templateHash": "sha256:7a53a519bb5fdd942fdf2a5702c652e7e26661f14dad07c10f98d78d0071db5e",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "tesla",
+      "file": "tesla.md",
+      "description": "Electric automotive. Radical subtraction, full-viewport photography, near-zero UI.",
+      "templateHash": "sha256:19f2f7e6073d708f46d2512e6bab3c7c417cf2b4d9f57ff6ec6f2e056ea942b0",
+      "sourceCommit": "d2a7eb2d1e4ca5f5272be4bec46a5f35f7f01edd",
+      "sourceUpdatedAt": "2026-04-09T18:04:01+03:00"
+    },
+    {
+      "brand": "theverge",
+      "file": "theverge.md",
+      "description": "Tech editorial media. Acid-mint and ultraviolet accents, Manuka display, rave-flyer story tiles.",
+      "templateHash": "sha256:5da2c3116e6845826b043ac115a80896a399efda2cebc0188981fba2ef9bb526",
+      "sourceCommit": "8287eab37321eb75654f1b221134421601b3e278",
+      "sourceUpdatedAt": "2026-04-11T17:03:12+03:00"
+    },
+    {
+      "brand": "together.ai",
+      "file": "together.ai.md",
+      "description": "Open-source AI infrastructure. Technical, blueprint-style design.",
+      "templateHash": "sha256:973c602c2faaa9b206abe615e372424f5e3292634476495104c1a35dd615cbc0",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "uber",
+      "file": "uber.md",
+      "description": "Mobility platform. Bold black and white, tight type, urban energy.",
+      "templateHash": "sha256:5e689d1cd42824b7d68ea94a90c4c35a785838d29e70f1750c175171e4b07cff",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "vercel",
+      "file": "vercel.md",
+      "description": "Frontend deployment. Black and white precision, Geist font.",
+      "templateHash": "sha256:1598602198e95d1b9109cbf4065037c270710fcd0fd0cf02e2f5ccd8bc12670b",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "vodafone",
+      "file": "vodafone.md",
+      "description": "Global telecom brand. Monumental uppercase display, Vodafone Red chapter bands.",
+      "templateHash": "sha256:e9dfb9a376bc3311c84a4b0c58eab8b0d4707ad753f2172f0dfe9b23a616e779",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "voltagent",
+      "file": "voltagent.md",
+      "description": "AI agent framework. Void-black canvas, emerald accent, terminal-native.",
+      "templateHash": "sha256:28d9aff3902b5d3306d62656053939b6914faf18951d25147490b8fc19053df5",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "warp",
+      "file": "warp.md",
+      "description": "Modern terminal. Dark IDE-like interface, block-based command UI.",
+      "templateHash": "sha256:965c3a983428a6512e5121d36fdaea4f801bf491f609526e85c85b10b1a890f1",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "webflow",
+      "file": "webflow.md",
+      "description": "Visual web builder. Blue-accented, polished marketing site aesthetic.",
+      "templateHash": "sha256:951cff31cd4c89ea64db778a8f62f5cded54de9f22d320c87d30131647301972",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "wired",
+      "file": "wired.md",
+      "description": "Tech magazine. Paper-white broadsheet density, custom serif display, mono kickers, ink-blue links.",
+      "templateHash": "sha256:c19d9272bb3e26588c6c7b89db9fe44392336e5328f5e2990422fc456d9a6361",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "wise",
+      "file": "wise.md",
+      "description": "Money transfer. Bright green accent, friendly and clear.",
+      "templateHash": "sha256:35e188f4e12996b031c158b70a177d7c0b66b5e8e557971d4c41a077998e052b",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "x.ai",
+      "file": "x.ai.md",
+      "description": "Elon Musk's AI lab. Stark monochrome, futuristic minimalism.",
+      "templateHash": "sha256:2aae0c383e13feed3e5be6e34855dbf4b0e193d59a77ad29a252ef0b6cce0e4f",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    },
+    {
+      "brand": "zapier",
+      "file": "zapier.md",
+      "description": "Automation platform. Warm orange, friendly illustration-driven.",
+      "templateHash": "sha256:43cd2fa15871457294b92de5542c721ac545f17fc377c3c6472084feefdc0a57",
+      "sourceCommit": "de1a7bebb34ca01c662b8745e123ae422486ce71",
+      "sourceUpdatedAt": "2026-05-12T14:32:41+03:00"
+    }
+  ]
+}

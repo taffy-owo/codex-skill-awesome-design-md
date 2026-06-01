@@ -1,0 +1,50 @@
+name: Sync Upstream Templates
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run upstream sync
+        run: python awesome-design-md/scripts/sync_upstream.py
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> "$GITHUB_OUTPUT" || echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Read updated sources
+        if: steps.changes.outputs.changed == 'true'
+        id: sources
+        run: |
+          VERSION=$(python -c "import json; d=json.load(open('awesome-design-md/references/upstream/sources.json')); print(d['package']['version'])")
+          COUNT=$(python -c "import json; d=json.load(open('awesome-design-md/references/upstream/sources.json')); print(d['templates']['count'])")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+      - name: Create Pull Request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: sync upstream (getdesign ${{ steps.sources.outputs.version }}, ${{ steps.sources.outputs.count }} templates)"
+          title: "chore: sync upstream (getdesign ${{ steps.sources.outputs.version }})"
+          body: |
+            Automated sync from `VoltAgent/awesome-design-md` and `getdesign` npm package.
+            - **getdesign**: `${{ steps.sources.outputs.version }}`
+            - **Templates**: `${{ steps.sources.outputs.count }}`
+          branch: chore/sync-upstream
+          delete-branch: true
+          labels: automated,upstream-sync

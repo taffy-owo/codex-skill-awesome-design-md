@@ -5,8 +5,9 @@
 **Give your AI coding assistant brand-level design intuition**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Templates](https://img.shields.io/badge/Brand_Templates-69-blueviolet)](awesome-design-md/references/templates/)
+[![Templates](https://img.shields.io/badge/Brand_Templates-73-blueviolet)](awesome-design-md/references/templates/)
 [![Upstream](https://img.shields.io/badge/Upstream-VoltAgent%2Fawesome--design--md-orange)](https://github.com/VoltAgent/awesome-design-md)
+[![CI](https://github.com/taffy-owo/codex-skill-awesome-design-md/actions/workflows/test.yml/badge.svg)](https://github.com/taffy-owo/codex-skill-awesome-design-md/actions/workflows/test.yml)
 
 **English** | [中文](README.md)
 
@@ -16,7 +17,7 @@
 
 ## 📖 About
 
-A standalone, publishable [Codex](https://github.com/openai/codex) skill package that enables your AI coding assistant to automatically apply complete design specifications (`DESIGN.md`) from **69 well-known brands** when generating frontend UI — instead of generic default styling.
+A standalone, publishable [Codex](https://github.com/openai/codex) skill package that enables your AI coding assistant to automatically apply complete design specifications (`DESIGN.md`) from **73 well-known brands** when generating frontend UI — instead of generic default styling.
 
 Each `DESIGN.md` follows the [Google Stitch](https://github.com/nicepkg/nice-getdesign) format with 9 standardized sections:
 
@@ -34,16 +35,18 @@ Each `DESIGN.md` follows the [Google Stitch](https://github.com/nicepkg/nice-get
 
 ## ✨ Highlights
 
-- 🏢 **69 Brands** — Covering AI, dev tools, SaaS, fintech, automotive, consumer tech, and more
+- 🏢 **73 Brands** — Covering AI, dev tools, SaaS, fintech, automotive, consumer tech, and more
 - 📦 **Fully Local** — No API keys, no network access. Pure Markdown, ready to use
 - 🔧 **CLI Tools** — `list` / `install` one-command operations
 - 🔄 **Upstream Sync** — Script auto-fetches latest templates from VoltAgent repo and `getdesign` npm package
 - 🤖 **Multi-Agent Support** — Includes OpenAI Agent YAML config
+- ✅ **CI/CD** — GitHub Actions for automated testing + weekly upstream sync
+- 🧪 **Test Coverage** — pytest unit and integration tests
 
 ## 🏷️ Supported Brands
 
 <details>
-<summary>View all 69 brands</summary>
+<summary>View all 73 brands</summary>
 
 ### AI & LLM Platforms
 `claude` · `cohere` · `elevenlabs` · `minimax` · `mistral.ai` · `ollama` · `opencode.ai` · `replicate` · `runwayml` · `together.ai` · `voltagent` · `x.ai`
@@ -63,14 +66,17 @@ Each `DESIGN.md` follows the [Google Stitch](https://github.com/nicepkg/nice-get
 ### Fintech & Crypto
 `binance` · `coinbase` · `kraken` · `mastercard` · `revolut` · `stripe` · `wise`
 
+### Collaboration & Communication
+`slack`
+
 ### E-commerce & Retail
 `airbnb` · `meta` · `nike` · `shopify` · `starbucks`
 
 ### Media & Consumer Tech
-`apple` · `ibm` · `nvidia` · `pinterest` · `playstation` · `spacex` · `spotify` · `theverge` · `uber` · `vodafone` · `wired`
+`apple` · `dell-1996` · `hp` · `ibm` · `nvidia` · `pinterest` · `playstation` · `spacex` · `spotify` · `theverge` · `uber` · `vodafone` · `wired`
 
 ### Automotive
-`bmw` · `bugatti` · `ferrari` · `lamborghini` · `renault` · `tesla`
+`bmw` · `bmw-m` · `bugatti` · `ferrari` · `lamborghini` · `renault` · `tesla`
 
 </details>
 
@@ -84,14 +90,26 @@ python <CODEX_HOME>/skills/.system/skill-installer/scripts/install-skill-from-gi
   --path awesome-design-md
 ```
 
-### Option 2: Direct GitHub URL
+### Option 2: Direct GitHub URL (Codex)
 
 ```bash
 python <CODEX_HOME>/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --url https://github.com/taffy-owo/codex-skill-awesome-design-md/tree/main/awesome-design-md
 ```
 
-Restart Codex after installation to activate the skill.
+### Option 3: Antigravity (Gemini)
+
+```bash
+python awesome-design-md/scripts/install_to_antigravity.py
+# Or specify a custom path:
+python awesome-design-md/scripts/install_to_antigravity.py --antigravity-home ~/.gemini/antigravity
+```
+
+### Option 4: Manual Install (Universal)
+
+Copy the `awesome-design-md/` directory into your AI coding assistant's skills directory.
+
+Restart your AI coding assistant after installation to activate the skill.
 
 ## 📋 Usage
 
@@ -130,19 +148,25 @@ Automatically fetches the latest templates from the VoltAgent GitHub repo and th
 
 ```
 .
-├── awesome-design-md/          # Codex skill directory (install this)
-│   ├── SKILL.md                # Skill definition file
+├── awesome-design-md/              # Codex skill directory (install this)
+│   ├── SKILL.md                    # Skill definition file
 │   ├── agents/
-│   │   └── openai.yaml         # OpenAI Agent integration config
+│   │   └── openai.yaml             # OpenAI Agent integration config
 │   ├── scripts/
-│   │   ├── apply_template.py   # Template list / install CLI
-│   │   └── sync_upstream.py    # Upstream sync script
+│   │   ├── apply_template.py       # Template list / install CLI
+│   │   ├── sync_upstream.py        # Upstream sync script
+│   │   └── install_to_antigravity.py  # Antigravity install script
 │   └── references/
-│       ├── templates/          # 69 DESIGN.md templates + manifest.json
-│       └── upstream/           # Upstream snapshots and sync metadata
+│       ├── templates/              # 73 DESIGN.md templates + manifest.json
+│       └── upstream/               # Upstream snapshots and sync metadata
+├── tests/                          # pytest test suite
+├── .github/workflows/              # CI/CD workflows
+│   ├── test.yml                    # Automated testing
+│   └── sync-upstream.yml           # Weekly upstream sync
+├── CHANGELOG.md                    # Change log
 ├── LICENSE
-├── README.md                   # Chinese version (main)
-└── README_EN.md                # ← You are here (English)
+├── README.md                       # Chinese version (main)
+└── README_EN.md                    # ← You are here (English)
 ```
 
 ## 🎯 Quick Selection Guide

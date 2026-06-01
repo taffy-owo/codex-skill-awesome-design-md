@@ -1,278 +1,497 @@
-# Design System Inspired by WIRED
+---
+version: alpha
+name: Wired-design-analysis
+description: An inspired interpretation of Wired's design language — a flagship technology-magazine brand whose surface is a strict editorial duet of stark black wordmark on white canvas, anchored by a tall narrow custom display serif for hero headlines, a humanist serif body face for long-form reading, and a clean sans face for metadata; layout reads like a printed magazine ported to the web with very little marketing chrome.
 
-## 1. Visual Theme & Atmosphere
+colors:
+  primary: "#000000"
+  on-primary: "#ffffff"
+  ink: "#000000"
+  ink-soft: "#1a1a1a"
+  body: "#757575"
+  hairline: "#e0e0e0"
+  canvas: "#ffffff"
+  canvas-soft: "#f5f5f5"
+  link: "#057dbc"
 
-WIRED's homepage feels like a printed broadsheet that someone has plugged into a wall socket. The grid is dense, the rules are thin, the type is loud, and almost every surface is paper-white or pure black with no rounded corners and no decoration that doesn't earn its place. Image rectangles butt directly against headlines, hairline dividers separate stories the way pica rules separate columns in a real magazine, and the only colors that aren't grayscale come from the photography itself. There is no "card with shadow" anywhere — the entire layout is held together by typographic weight and the discipline of rules and whitespace, the same way a Condé Nast print page would be assembled in a paste-up room.
+typography:
+  display-hero:
+    fontFamily: WiredDisplay, "Times New Roman", Georgia, serif
+    fontSize: 64px
+    fontWeight: 400
+    lineHeight: 59.52px
+    letterSpacing: -0.5px
+  display-lg:
+    fontFamily: WiredDisplay, "Times New Roman", Georgia, serif
+    fontSize: 48px
+    fontWeight: 400
+    lineHeight: 50.4px
+    letterSpacing: -0.4px
+  display-md:
+    fontFamily: WiredDisplay, "Times New Roman", Georgia, serif
+    fontSize: 32px
+    fontWeight: 400
+    lineHeight: 35.2px
+    letterSpacing: -0.3px
+  display-sm:
+    fontFamily: WiredDisplay, "Times New Roman", Georgia, serif
+    fontSize: 26px
+    fontWeight: 400
+    lineHeight: 28.08px
+  display-xs:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 20px
+    fontWeight: 700
+    lineHeight: 24px
+    letterSpacing: -0.28px
+  body-serif-lg:
+    fontFamily: BreveText, Georgia, "Times New Roman", serif
+    fontSize: 19px
+    fontWeight: 400
+    lineHeight: 27.93px
+    letterSpacing: 0.108px
+  body-serif-md:
+    fontFamily: BreveText, Georgia, "Times New Roman", serif
+    fontSize: 16px
+    fontWeight: 400
+    lineHeight: 24px
+    letterSpacing: 0.09px
+  body-md:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 17px
+    fontWeight: 400
+    lineHeight: 20px
+  body-md-strong:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 17px
+    fontWeight: 700
+    lineHeight: 22px
+    letterSpacing: -0.144px
+  body-sm:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 14px
+    fontWeight: 400
+    lineHeight: 18px
+    letterSpacing: 0.4px
+  body-sm-strong:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 14px
+    fontWeight: 700
+    lineHeight: 18px
+    letterSpacing: 0.4px
+  byline:
+    fontFamily: BreveText, Georgia, "Times New Roman", serif
+    fontSize: 12.73px
+    fontWeight: 700
+    lineHeight: 28px
+    letterSpacing: 0.108px
+  caption:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 12px
+    fontWeight: 400
+    lineHeight: 16px
+  button-md:
+    fontFamily: Apercu, "Helvetica Neue", Helvetica, Arial, sans-serif
+    fontSize: 16px
+    fontWeight: 700
+    lineHeight: 20px
+    letterSpacing: 0.3px
 
-The signature move is the **typographic stack**: a brutally large custom serif (WiredDisplay) for the main headline, a humanist serif (BreveText) for body and decks, a geometric sans (Apercu) for UI affordances, and a hard mono uppercase (WiredMono) for the kickers, eyebrows, and timestamps that mark every story. That mono kicker — usually black caps with letter-spacing wide enough to read as a Geiger-counter tick — is what makes a WIRED page instantly recognizable from across the room.
+rounded:
+  none: 0px
+  full: 9999px
 
-There is exactly one accent color that matters: a saturated link blue (`#057dbc`) that lights up underlined hover states like a CRT scanline. Everything else is black, paper white, and two grays — the design's confidence comes from refusing to invent more.
+spacing:
+  xxs: 2px
+  xs: 4px
+  sm: 8px
+  md: 12px
+  lg: 16px
+  xl: 20px
+  2xl: 24px
+  3xl: 32px
+  4xl: 48px
+
+components:
+  nav-bar:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm-strong}"
+    padding: "{spacing.md} {spacing.xl}"
+  nav-link:
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm-strong}"
+  button-primary:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md} {spacing.xl}"
+  button-outline:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.ink}"
+    typography: "{typography.button-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md} {spacing.xl}"
+  button-icon-circular:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.full}"
+    padding: "{spacing.sm}"
+  text-input:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.ink}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md} {spacing.lg}"
+  story-card-large:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-md}"
+    padding: "{spacing.lg}"
+  story-card:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-xs}"
+    padding: "{spacing.md}"
+  story-row:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.hairline}"
+    typography: "{typography.body-md-strong}"
+    padding: "{spacing.lg} 0"
+  category-eyebrow:
+    textColor: "{colors.ink}"
+    typography: "{typography.body-sm-strong}"
+  byline-row:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.body}"
+    typography: "{typography.byline}"
+  hero-band:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.display-hero}"
+    padding: "{spacing.4xl} {spacing.xl}"
+  masthead-band:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.ink}"
+    typography: "{typography.body-md-strong}"
+    padding: "{spacing.md} {spacing.xl}"
+  hairline-divider:
+    borderColor: "{colors.hairline}"
+  footer:
+    backgroundColor: "{colors.primary}"
+    textColor: "{colors.on-primary}"
+    typography: "{typography.body-sm}"
+    padding: "{spacing.4xl} {spacing.xl}"
+
+  # ─── Examples (illustrative) — auto-derived; resolve any TO_FILL markers below ───
+  ex-pricing-tier:
+    description: "Default Pricing tier card. Re-uses feature-card chrome with brand canvas-soft surface."
+    backgroundColor: "{colors.canvas-soft}"
+    textColor: "{colors.ink}"
+    borderColor: "{colors.hairline}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  ex-pricing-tier-featured:
+    description: "Featured/highlighted tier — polarity-flipped surface (dark fill + light text in light mode, light fill + dark text in dark mode)."
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.on-primary}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  ex-product-selector:
+    description: "What's Included summary card — re-purposed for SaaS / B2B verticals (NOT a literal product gallery)."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  ex-cart-drawer:
+    description: "Subscription summary — re-purposed for SaaS / B2B (line items per add-on, not literal cart)."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+    item-divider: "{colors.hairline}"
+  ex-app-shell-row:
+    description: "Sidebar nav row inside the App Shell example. Active state uses brand primary as the indicator."
+    backgroundColor: "{colors.canvas}"
+    activeIndicator: "{colors.primary}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md} {spacing.lg}"
+  ex-data-table-cell:
+    description: "Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm."
+    headerBackground: "{colors.canvas-soft}"
+    headerTypography: "{typography.caption}"
+    bodyTypography: "{typography.body-sm}"
+    cellPadding: "{spacing.md} {spacing.lg}"
+    rowBorder: "{colors.hairline}"
+  ex-auth-form-card:
+    description: "Sign-in / sign-up card. Re-uses feature-card chrome with text-input primitives inside."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  ex-modal-card:
+    description: "Modal dialog surface — same chrome as feature-card with elevated shadow."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.lg}"
+  ex-empty-state-card:
+    description: "Empty-state illustration frame."
+    backgroundColor: "{colors.canvas-soft}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.3xl}"
+    captionTypography: "{typography.body-md}"
+  ex-toast:
+    description: "Toast notification surface — feature-card shape + medium shadow."
+    backgroundColor: "{colors.canvas}"
+    rounded: "{rounded.none}"
+    padding: "{spacing.md} {spacing.lg}"
+    typography: "{typography.body-sm}"
+
+---
+
+
+## Overview
+
+Wired is the flagship technology-magazine brand under Condé Nast — and the web surface refuses to dress itself as a SaaS marketing site. The page is unmistakably an editorial product: a white canvas, a strict black wordmark in the brand's proprietary `WiredDisplay` (a tall, narrow, high-contrast serif used at 64 px), and stacked story cards that read as a printed magazine grid ported to the screen. There is no atmospheric gradient, no decorative chrome, no chromatic accent — the brand's only colour beyond the black-and-white duet is the small `{colors.link}` (`#057dbc`) used for inline body links inside long-form articles.
+
+Type carries the entire identity. Three families ladder the system: `WiredDisplay` (the proprietary high-contrast serif) for hero / section headlines; `BreveText` (a humanist serif) for long-form body and bylines; and `Apercu` (a humanist sans) for metadata, captions, eyebrow tags, and buttons. The pairing is editorial-grade: serifs for narrative, sans for navigation and structural labels.
+
+Buttons are square. The brand uses `{rounded.none}` 0 px corners across the entire UI — newsletter sign-ups, login forms, "Read more" CTAs all render as sharp rectangles. The only circular shape is the `button-icon-circular` used for social-share affordances. There are no soft drop-shadows; the brand uses hairline borders for elevation when needed.
 
 **Key Characteristics:**
-- Newsstand-density editorial grid: rules and whitespace, never cards or shadows
-- Custom serif display + technical mono kickers — the Condé-Nast-meets-engineering-lab voice
-- Strictly square corners on every image, container, and ribbon (only icon buttons are circular)
-- 2px hard black borders on buttons and links — printerly, not webby
-- Mono ALL-CAPS eyebrows on every story with wide tracking (0.9–1.2px)
-- Single ink-blue accent for links; everything else lives in pure grayscale
-- Dark theme = the *footer*, not the page; the page itself is committed paper-white
+- A strict black-and-white duet with no chromatic accent except the inline link blue `{colors.link}`. The brand reads as a printed magazine.
+- Three-face typographic system — `WiredDisplay` serif for display, `BreveText` serif for body, `Apercu` sans for metadata and buttons.
+- Square buttons (`{rounded.none}`) — the brand never softens corners on interactive elements.
+- A magazine-style story grid: large feature card at top, two-up secondary, then a vertical stack of bylined story rows separated by `{colors.hairline}` 1 px dividers.
+- The brand's only signature decorative move is the **masthead band** — a thin black strip with the wordmark centred, no other decoration.
+- A near-black `{colors.ink}` (`#000000`) footer band, no graphics, just text columns and the wordmark repeating.
 
-## 2. Color Palette & Roles
+## Colors
 
-### Primary (Editorial Ink)
-- **WIRED Black** (`#000000`): Pure ink for ribbons, section dividers, button borders, headline rules — the strongest hand on the page.
-- **Page Ink** (`#1a1a1a`): Near-black used for headlines and body type. Slightly softened so long-form reading doesn't feel like staring at a power button.
-- **Paper White** (`#ffffff`): Default canvas for the entire site. Treat it like newsprint stock — uninterrupted, never tinted.
+### Brand & Accent
+- **Ink Black** (`{colors.primary}` — `#000000`): The brand's only "accent." Used for wordmark, headlines, CTAs, footer fill. Pure black, never softened.
 
-### Secondary (Editorial Voice)
-- **Link Blue** (`#057dbc`): The single brand accent. Used for inline link hovers, breadcrumbs, and the rare button — never for backgrounds, never decorated. Think of it as the only color allowed in a black-and-white film.
+### Surface
+- **Canvas** (`{colors.canvas}` — `#ffffff`): The default page background.
+- **Canvas Soft** (`{colors.canvas-soft}` — `#f5f5f5`): Rare tint used for the comment-section background and search-result row hover states (not in the main page rhythm).
+- **Hairline** (`{colors.hairline}` — `#e0e0e0`): 1 px dividers between story rows. The brand's only "line."
 
-### Surface & Background
-- **Newsprint** (`#ffffff`): Editorial pages, story grids, hero zones.
-- **Footer Ink** (`#1a1a1a`): The only inverted region on the homepage. Paper white type sits on top.
-- **Hairline Tint** (`#e2e8f0`): Reserved for `<hr>` elements between sections — barely visible, like a margin rule.
+### Text
+- **Ink** (`{colors.ink}` — `#000000`): Every headline, every body paragraph in BreveText.
+- **Ink Soft** (`{colors.ink-soft}` — `#1a1a1a`): A near-black variant used for caption-strong / footer link emphasis.
+- **Body** (`{colors.body}` — `#757575`): Secondary metadata — bylines, timestamps, supporting body lines.
 
-### Neutrals & Text
-- **Headline Black** (`#1a1a1a`): All H1/H2 display type.
-- **Body Gray** (`#1a1a1a`): Long-form body text — same ink as headlines for unity.
-- **Caption Gray** (`#757575`): Secondary metadata: bylines, timestamps, photo credits.
-- **Disabled Gray** (`#999999`): Inactive links, low-priority labels.
-- **Hairline Border** (`#e2e8f0`): Subtle separators only.
+### Semantic
+The brand operates with one inline link colour and no separate error / success / warning palette in its marketing surface. Validation cues on form pages use the ink black + body grey hierarchy.
 
-### Semantic & Accent
-- **Brand Hover Blue** (`#057dbc`): Link rollover state — also serves as the only "interactive" cue.
-- *(WIRED's homepage intentionally omits semantic success/error/warning palettes — this is editorial, not a SaaS dashboard.)*
+- **Link** (`{colors.link}` — `#057dbc`): The inline body-link blue. Used only inside long-form article body copy, never on UI buttons or navigation.
 
-### Gradient System
-None. WIRED uses zero gradients. The closest thing to a gradient on the page is the tonal range inside a photograph — gradients live *in the imagery*, not in the chrome.
-
-## 3. Typography Rules
+## Typography
 
 ### Font Family
-- **WiredDisplay** (custom serif, fallback `helvetica`) — Display headlines and feature titles.
-- **BreveText** (humanist serif, fallback `helvetica`) — Article body, decks, longer captions.
-- **Apercu** (geometric sans, fallback `helvetica`) — UI labels, buttons, navigation, mid-weight headings.
-- **WiredMono** (custom monospace, fallback `helvetica`) — Eyebrows, kickers, timestamps, section labels, ALL CAPS.
-- **Inter** (sans, system fallback) — Utility UI in newer modules.
-- **ProximaNova** (sans, fallback `helvetica`) — Legacy UI surfaces.
-- **WIRED Mono** (custom mono, fallback `Monaco, Courier New, Courier`) — Article-page eyebrows.
+Three families ladder the system:
+1. **WiredDisplay** — the proprietary tall-narrow high-contrast serif used exclusively for display headlines (64 px hero, scaling down to 26 px sub-display). The brand's most-recognisable typographic signature.
+2. **BreveText** — the proprietary humanist serif used for long-form body, bylines, and editorial captions. Used at 16 – 19 px line-height 1.45 – 1.50 for comfortable reading density.
+3. **Apercu** — a humanist sans used for nav, button labels, category eyebrows, metadata, and captions. Weights 400 / 700.
+
+Inter is loaded as a fourth fallback face for embedded utility surfaces (the comment section, account pages) but does not appear on the main marketing / article surface.
 
 ### Hierarchy
 
-| Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
-|---|---|---|---|---|---|---|
-| Display Headline (Hero) | WiredDisplay | 64px / 4.00rem | regular | 0.93 | -0.5px | Tight, almost touching descenders — newsstand presence |
-| Display Headline (Mobile / Mid) | WiredDisplay | 26px / 1.63rem | regular | 1.08 | — | Same face, scaled down for grid blocks |
-| Section Heading | Apercu | 20px / 1.25rem | 700 | 1.20 | -0.28px | Bold sans for module titles ("Most Popular", "Featured") |
-| Subheading | Apercu | 17px / 1.06rem | 700 | 1.29 | -0.144px | Story decks within feature blocks |
-| Article Deck (Serif) | BreveText | 19px / 1.19rem | regular | 1.47 | 0.108px | Long-form lead paragraphs |
-| Article Body (Serif) | BreveText | 16px / 1.00rem | regular | 1.50 | 0.09px | Standard paragraph text |
-| UI Heading | Apercu | 16px / 1.00rem | 700 | 1.25 | 0.3px | Inline UI labels, button captions |
-| Button Label | Apercu | 16px / 1.00rem | 700 | 1.25 | 0.3px | All caps optional, depending on placement |
-| Link (Inline UI) | Apercu | 14px / 0.88rem | regular | 1.29 | 0.4px | Footer links, secondary nav |
-| Eyebrow / Kicker | WiredMono | 13px / 0.81rem | regular | 1.23 | 0.92px | UPPERCASE — story category above headline |
-| Eyebrow Bold | WiredMono | 13px / 0.81rem | 700 | 1.23 | — | UPPERCASE — featured story marker |
-| Section Ribbon | WiredMono | 12px / 0.75rem | 700 | 1.00 | 1.2px | UPPERCASE — black-bar section labels |
-| Photo Caption | BreveText | 12.73px / 0.80rem | 700 | 2.20 (relaxed) | 0.108px | Generous leading — print-photo treatment |
-| Timestamp / Meta | WiredMono | 12px / 0.75rem | regular | 1.33 | 1.1px | UPPERCASE, used for "X HOURS AGO" markers |
-| Tertiary Footer Link | ProximaNova | 11px / 0.69rem | regular | 1.45 | — | Newsletter footer, legal links |
-| Inter UI Heading | Inter | 16px / 1.00rem | 600 | 1.23 | 0.108px | Newer module headers |
-| Inter UI Caption | Inter | 14px / 0.88rem | 600 | 1.40 | — | Compact UI metadata |
+| Token | Size | Weight | Line Height | Letter Spacing | Use |
+|---|---|---|---|---|---|
+| `{typography.display-hero}` | 64px | 400 | 59.5px | -0.5px | Cover-story headline. |
+| `{typography.display-lg}` | 48px | 400 | 50.4px | -0.4px | Major section / feature headlines. |
+| `{typography.display-md}` | 32px | 400 | 35.2px | -0.3px | Story-card large variant. |
+| `{typography.display-sm}` | 26px | 400 | 28px | 0 | Sub-display headings inside long-form articles. |
+| `{typography.display-xs}` | 20px | 700 | 24px | -0.28px | Sans (Apercu) display micro-headings for category callouts. |
+| `{typography.body-serif-lg}` | 19px | 400 | 27.93px | 0.108px | Lead paragraph of an article (BreveText). |
+| `{typography.body-serif-md}` | 16px | 400 | 24px | 0.09px | Default article body (BreveText). |
+| `{typography.body-md}` | 17px | 400 | 20px | 0 | Sans body (Apercu) for nav / metadata. |
+| `{typography.body-md-strong}` | 17px | 700 | 22px | -0.144px | Bold sans body. |
+| `{typography.body-sm}` | 14px | 400 | 18px | 0.4px | Secondary sans body. |
+| `{typography.body-sm-strong}` | 14px | 700 | 18px | 0.4px | Bold caption / nav-link. |
+| `{typography.byline}` | 12.73px | 700 | 28px | 0.108px | Article byline (BreveText). |
+| `{typography.caption}` | 12px | 400 | 16px | 0 | Fine print, image captions. |
+| `{typography.button-md}` | 16px | 700 | 20px | 0.3px | Button label. |
 
 ### Principles
-- **Four faces, four jobs.** WiredDisplay is for shouting, BreveText is for reading, Apercu is for clicking, WiredMono is for labeling. They never trade roles. This separation is what keeps the page from feeling like a typography sample.
-- **Tight headlines, generous body.** Display type runs as low as 0.93 line-height (nearly touching), while body BreveText opens out to 1.47–1.50. The contrast is the editorial fingerprint.
-- **Mono is always uppercase.** Every WiredMono usage carries `text-transform: uppercase` and 0.9–1.2px letter-spacing. Treat lowercase mono as broken — it should not appear on a WIRED page.
-- **Bold is rare.** Apercu uses weight 700 only for UI emphasis; the editorial layer (Display + BreveText) leans entirely on size and ink color, never on bolding.
-- **Letter-spacing has two registers**: positive (0.9–1.2px) for ALL-CAPS mono, negative (-0.144 to -0.5px) for large display serif. Never neutral on the largest type.
+- **Serif for narrative, sans for structure.** The serif faces never carry button labels or nav text; the sans face never carries article body.
+- **Display weight 400** — the proprietary WiredDisplay reads as elegant by virtue of its thin-tall-narrow design at default weight, not via weight 700+.
+- **Bylines use BreveText weight 700 with relaxed line-height 2.2.** The vertical breathing is part of the editorial signature.
 
 ### Note on Font Substitutes
-The line-height values in the hierarchy table (especially the 0.93 on the 64px hero) assume the **proprietary WiredDisplay and BreveText faces**, which have tight metrics with short ascenders/descenders. If you substitute these with wide-metric open-source fonts like **Playfair Display** or **Libre Caslon**, loosen display line-heights by approximately **+0.10 to +0.12** to prevent ascender/descender collisions on wrapping lines (e.g., 0.93 → 1.05, 1.08 → 1.18). Apercu substitutes (Inter, Work Sans, Manrope) work at the token values without adjustment. BreveText body substitutes (Lora, Source Serif 4) also work without adjustment because body leading is already generous.
+The three proprietary faces have no exact substitutes. Best open-source approximations:
+- **WiredDisplay** — *Playfair Display* weight 400 at large display sizes captures the high-contrast didone feel, though wider than the brand's tall-narrow proportions.
+- **BreveText** — *Lora* or *Source Serif Pro* at 16 – 19 px.
+- **Apercu** — *Inter* or *Manrope* weights 400 / 700.
 
-## 4. Component Stylings
-
-### Buttons
-
-**Primary CTA — Black Outline ("Subscribe")**
-- Background: `#ffffff` (Paper White)
-- Text: `#000000` (WIRED Black), Apercu 16px / 700 / 0.3px tracking
-- Border: `2px solid #000000` — the printerly hard rule, not a 1px UI border
-- Border radius: `0` (square corners)
-- Padding: vertical ≈ 12–14px, horizontal ≈ 24px
-- Hover: background flips to `#000000`, text flips to `#ffffff` — pure inversion, no easing on the rule
-- Transition: ~150ms color/background only
-
-**Secondary — Inverted ("Sign In", in dark zones)**
-- Background: `#000000`
-- Text: `#ffffff`
-- Border: `2px solid #ffffff`
-- Same square corners, same inversion-on-hover behavior
-
-**Tertiary — Underlined Inline Link**
-- Treated as a button when wrapped in nav: text `#1a1a1a`, underline always present, hover swaps color to `#057dbc` while keeping the underline
-- No padding, no border, no background — this is editorial linking, not UI
-
-**Pill / Round Icon Button**
-- Border radius: `50%` (the only circular shape on the site)
-- Used exclusively for icon controls (search, account, social) in the header
-- Border: 1px solid `#757575` or no border depending on placement
-- Size: ~32–40px square footprint
-
-**Tag / Span Pill**
-- Border radius: `1920px` (effectively a full pill — only used inside text spans like "BREAKING")
-- Background: solid black or red accent depending on context
-- Text: white, mono 11–12px caps
-
-### Cards & Containers
-- **Cards do not exist.** WIRED's homepage has no rounded boxes, no shadows, no surface elevation.
-- A "story tile" is just an image rectangle stacked above a kicker + headline + deck, separated from neighbors by **1px hairline rules** (`#000000` or `#4a5568`) or by raw whitespace.
-- The closest thing to a "container" is the black ribbon section header (e.g., "MOST POPULAR") — a full-bleed black bar with white WiredMono caps, no padding refinement, no rounded ends.
-- Hover behavior on a story tile: the headline link text shifts from `#1a1a1a` to `#057dbc` and the underline appears. The image itself does not zoom, lift, or shadow.
-
-### Inputs & Forms
-- **Newsletter input**: rectangular, `2px solid #000000` border, `0` radius, white background, Apercu 16px placeholder.
-- **Focus**: border stays 2px black, no glow ring, no color change — focus is signaled by the blinking caret only. (Add a 2px outset for accessibility if you ship this — WIRED's own implementation under-serves keyboard users here.)
-- **Error**: text label below in `#e53e3e` (Fides cookie overlay borrows this red — use sparingly).
-- **Disabled**: text drops to `#a0aec0`, border softens to `#757575`.
-
-### Navigation
-- **Top utility bar**: black (`#000000`) full-bleed strip, ~32–40px tall, mono caps links separated by hairline dividers, `#ffffff` text, hover → `#057dbc`.
-- **Main nav**: paper-white (`#ffffff`) row beneath the bug logo, Apercu 14–16px / regular, hover → `#057dbc` underline.
-- **Logo**: WIRED bug, ~209×42px, centered or left-aligned, never recolored, always pure black on white.
-- **Mobile**: nav collapses to a hamburger left of the bug logo. Section nav becomes a slide-down drawer of mono caps links.
-- **Transition**: hover color swaps are instant or ~120ms; no bouncy easing — editorial restraint.
-
-### Image Treatment
-- **Aspect ratios**: predominantly 16:9 for hero images, 4:3 for grid story tiles, 1:1 for smaller "Most Popular" thumbnails.
-- **Corners**: ALWAYS 0 radius. Square. The only rounded image is a circular author avatar (50%).
-- **Full-bleed**: hero photographs run edge-to-edge of the column they occupy; no inset, no border.
-- **Captions**: BreveText 12.73px / 700 with relaxed 2.20 line-height — placed directly under the image, italicized in some templates.
-- **Hover**: no zoom, no opacity dip — only the headline below the image responds.
-- **Lazy loading**: standard `loading="lazy"` on all below-the-fold imagery.
-
-### Editorial Ribbons & Section Markers
-- Black bar (`#000000`) full-bleed with white WiredMono uppercase label inside (e.g., "MOST POPULAR", "BACKCHANNEL", "GEAR").
-- Height ~32–40px, no padding refinement, no rounded ends.
-- Sometimes a thin 2px black rule sits directly above or below to double-frame the bar.
-
-### Numbered Lists ("Most Popular")
-- A vertical list of stories prefixed with WiredDisplay numerals (01, 02, 03…) at ~40–48px, sitting tight against the headline they label.
-- Hairline rule between each item, no other decoration.
-
-## 5. Layout Principles
+## Layout
 
 ### Spacing System
-- **Base unit**: 8px.
-- **Scale**: 1px (hairline), 4px, 8px, 12px, 14.11px, 15px, 16px, 24px, 25.46px, 29.66px, 32px, 40px, 48px, 64px.
-- **Section padding**: typically 32–48px vertical between major editorial blocks.
-- **Card padding**: there are no cards; the gutter between story tiles is 24–32px horizontally and 16–24px vertically.
-- **Inline spacing**: kickers sit ~4–8px above headlines; decks sit ~8–12px below headlines; bylines/timestamps another 8–12px below the deck.
+- **Base unit**: 4 px.
+- **Tokens**: `{spacing.xxs}` 2 px · `{spacing.xs}` 4 px · `{spacing.sm}` 8 px · `{spacing.md}` 12 px · `{spacing.lg}` 16 px · `{spacing.xl}` 20 px · `{spacing.2xl}` 24 px · `{spacing.3xl}` 32 px · `{spacing.4xl}` 48 px.
+- **Section padding**: hero / story grid use `{spacing.4xl}` 48 px top/bottom on desktop.
+- **Story row padding**: `{spacing.lg}` 16 px vertical between bylined story rows.
 
 ### Grid & Container
-- **Max width**: ~1280–1600px on desktop (the dembrandt sweep detected breakpoints up to 1600px), centered with generous outer margins.
-- **Column patterns**: 12-column grid that resolves into 2/3/4 column story arrangements depending on module — feature blocks often run a "1 large + 2 small" pattern with hairline rules between each.
-- **Column gutters**: ~24–32px, separated by hairline `#000000` or `#4a5568` 1px rules where the editorial logic demands a "page-fold" feel.
+- Marketing content uses a wide container (~1400 px max).
+- Cover-story grid: 1 large hero + 2-up secondary stories + vertical stack.
+- Story-row stack: full-width single column with hairline dividers.
 
-### Whitespace Philosophy
-WIRED treats whitespace the way a magazine art director treats margin: it's the silence around the type, not a styling choice. The page never breathes excessively (this is not Stripe or Apple); it breathes *editorially* — enough room to keep adjacent stories from arguing, never enough to suggest there's nothing on the page. If an empty area looks like it could fit another headline, that empty area is doing its job.
+### Responsive Strategy
 
-### Border Radius Scale
-- `0` — every container, every image, every button, every input. The default.
-- `1920px` — only inside text spans that need to look like a full pill ("BREAKING", "LIVE").
-- `50%` — only on round icon buttons and circular author avatars.
-
-There are exactly three radii on the entire site, and two of them are reserved for non-rectangular shapes. This is the **strictest** corner discipline of any major editorial property.
-
-## 6. Depth & Elevation
-
-| Level | Treatment | Use |
-|---|---|---|
-| 0 | No shadow, no border | Default editorial surface — text on paper |
-| 1 | 1px solid `#e2e8f0` hairline `<hr>` | Quiet section divider, almost invisible |
-| 2 | 1px solid `#000000` hairline rule | Editorial column divider — printerly, structural |
-| 3 | 2px solid `#000000` border | Buttons, inputs, ribbons — interactive emphasis |
-| 4 | Black ribbon bar (`#000000` fill) | Section labels — the most "elevated" surface on the page |
-| 5 | Inverted footer block | Dark `#1a1a1a` zone with white type — the only inversion |
-
-WIRED's depth philosophy is **flat by religion**. There is exactly one shadow token in the entire site (a default `0 0 0 transparent` placeholder) and no `box-shadow` is applied to story tiles, headers, modals, or cards. Depth is communicated by **rule weight** (1px hairline → 2px hard rule → solid black ribbon), not by simulated lighting.
-
-### Decorative Depth
-None. No gradients, no glow, no halos, no scrim overlays beyond the standard photo caption gradient. WIRED earns its visual interest from photography and typographic contrast, not from chrome.
-
-## 7. Do's and Don'ts
-
-### Do
-- **Do** use 2px hard black borders on every primary button — no 1px softness, no rounded edges.
-- **Do** put a WiredMono ALL-CAPS kicker above every story headline (4–8px above, 0.9–1.2px tracking).
-- **Do** use BreveText for any paragraph longer than two lines — Apercu is for UI, not reading.
-- **Do** keep images square-cornered, edge-to-edge, with the caption hugging the bottom edge.
-- **Do** separate story tiles with hairline rules or whitespace, never with cards or shadows.
-- **Do** invert (black background, white type) only for footers, ribbons, and the utility nav strip.
-- **Do** use `#057dbc` link blue exclusively for hover states — never as a background or button fill.
-- **Do** scale headlines aggressively: 64px on hero, 26px on grid blocks, never 32px "safe middle ground".
-
-### Don't
-- **Don't** add `box-shadow` to anything. Ever. WIRED doesn't ship shadows.
-- **Don't** round corners on rectangular containers — `border-radius: 0` is law.
-- **Don't** mix typefaces inside one role: WiredDisplay never sets body, BreveText never sets buttons.
-- **Don't** use color outside grayscale + `#057dbc`. No orange CTAs, no green success pills.
-- **Don't** use Apercu in lowercase for kickers — that's WiredMono's job, and it must be UPPERCASE.
-- **Don't** use gradients, blurs, glassmorphism, or atmospheric effects — they break the printerly contract.
-- **Don't** rely on hover lift effects. WIRED's hover is a color swap on text, nothing more.
-- **Don't** invent new pill shapes. Round = icons only. Pill = inline text spans only. Everything else is square.
-
-## 8. Responsive Behavior
-
-### Breakpoints
+#### Breakpoints
 
 | Name | Width | Key Changes |
 |---|---|---|
-| Small Mobile | <375px | Single column, hamburger nav, all hero modules collapse to stacked image-headline-deck |
-| Mobile | 375–767px | Single column, story grid becomes vertical scroll, "Most Popular" numbers shrink to 32px |
-| Tablet | 768–1023px | 2-column story grid, sidebar collapses below main feed, nav becomes condensed |
-| Desktop | 1024–1599px | Full editorial 3–4 column grid, sidebar restored, max headline scale active |
-| Large Desktop | ≥1600px | Page caps at ~1600px container, whitespace expands at the margins, no further scaling |
+| Mobile | < 768px | Cover hero 64→40 px; all grids 1-up; hamburger nav. |
+| Tablet | 768–1023px | 2-up secondary story grid. |
+| Desktop | ≥ 1024px | Full magazine grid. |
 
-The dembrandt sweep detected an unusual range of intermediate breakpoints (1280, 1025, 1024, 1023, 768, 767, 667, 599, 570, 569, 480, 425, 375, 320, 319) — Wired's grid micro-tunes at almost every common viewport, especially around the iPad portrait/landscape boundary.
+#### Touch Targets
+Button-primary renders ~44 px tall (12 vertical padding + 20 line). WCAG AAA at all widths.
 
-### Touch Targets
-- Primary button: ~44x44px minimum (16px text + 12–14px vertical padding satisfies WCAG AAA).
-- Mono caps links in the utility bar are smaller (~32px tall) — WIRED's own implementation undershoots WCAG here. **For derivative work, pad mono nav links to 44px.**
-- Round icon buttons in the header are ~40px circles, comfortably touch-friendly.
+#### Collapsing Strategy
+- Nav: full link row + Subscribe CTA at desktop. Hamburger at mobile.
+- Magazine grid: hero stays full-width; 2-up secondary drops to 1-up at mobile.
+- Story rows: stay single-column at all viewports.
 
-### Collapsing Strategy
-- **Nav**: utility bar drops below 768px; main nav collapses into hamburger drawer. Bug logo recenters on mobile.
-- **Grid**: 4-col → 3-col → 2-col → 1-col as viewport tightens. Hairline rules persist between every column count, so the printerly feel survives the collapse.
-- **Spacing**: vertical rhythm tightens from 48px → 32px → 24px between modules on mobile. Horizontal page padding shrinks from 64px → 24px → 16px.
-- **Type**: WiredDisplay hero scales from 64px to ~36–42px on mobile, headlines from 26px to ~22px, kickers stay locked at 12–13px (mono caps don't scale down further or they become unreadable).
+#### Image Behavior
+- Cover images: full-bleed 16:9 hero / 4:3 secondary.
+- Article body images: full-width inside the article column.
+- Author avatars: small inline circular crops next to bylines.
 
-### Image Behavior
-- All images are responsive raster (`srcset`-driven), aspect ratios preserved: 16:9 hero, 4:3 mid, 1:1 thumbnails.
-- No art-direction swaps — the same crop scales across breakpoints.
-- `loading="lazy"` on all below-the-fold imagery, `eager` on the hero only.
+## Elevation & Depth
 
-## 9. Agent Prompt Guide
+| Level | Treatment | Use |
+|---|---|---|
+| Level 0 — Flat | No shadow, no border. | Default — almost every surface lives at this level. |
+| Level 1 — Hairline | 1 px solid `{colors.hairline}` border. | Story-row dividers, input borders. |
+| Level 2 — Heavy Black Border | 2 px solid `{colors.ink}` border. | Subscribe CTA on certain campaign moments. |
 
-### Quick Color Reference
-- **Primary Ink (text + ribbons)**: "WIRED Black (`#000000`)"
-- **Page Canvas**: "Paper White (`#ffffff`)"
-- **Headline / Body Text**: "Page Ink (`#1a1a1a`)"
-- **Caption / Metadata**: "Caption Gray (`#757575`)"
-- **Hairline / Quiet Border**: "Hairline Tint (`#e2e8f0`)"
-- **Link Hover Accent (the only color)**: "Link Blue (`#057dbc`)"
+The brand uses no drop-shadows. Surface contrast and hairline borders carry all visual hierarchy.
 
-### Example Component Prompts
-1. *"Create an editorial story tile with a 16:9 image (square corners), an UPPERCASE WiredMono kicker in `#1a1a1a` above a 26px WiredDisplay headline. Separate the tile from its neighbor with a 1px black hairline rule. No card, no shadow, no border-radius."*
-2. *"Design a primary subscribe button with a 2px solid `#000000` border, square corners, `#ffffff` background, Apercu 16px / 700 / 0.3px tracking text in `#000000`. Hover state inverts to black background with white text in 150ms."*
-3. *"Build a 'Most Popular' module: full-bleed black ribbon header with WiredMono uppercase label in white, followed by a numbered list (01–05) using 40px WiredDisplay numerals and 17px Apercu 700 headlines, separated by hairline rules."*
-4. *"Create a newsletter signup form with a 2px solid black input border, no radius, Apercu 16px placeholder in `#757575`, and an inverted black submit button beside it."*
-5. *"Design a footer in `#1a1a1a` with paper-white tertiary navigation in ProximaNova 11px, hover color `#057dbc`, and a centered WIRED bug logo at the top of the block."*
+## Shapes
 
-### Iteration Guide
-When refining existing screens generated with this design system:
-1. **Audit corners first.** If you see any `border-radius` other than `0`, `50%` (icons/avatars), or `1920px` (text pills), flatten it. Round corners are the single most common mistake.
-2. **Audit shadows.** Strip every `box-shadow`. If a tile needs to feel "lifted", use a 2px black border or a hairline rule instead.
-3. **Audit typeface roles.** Make sure WiredDisplay only sets headlines, BreveText only sets reading body, Apercu only sets UI, WiredMono only sets ALL-CAPS labels. Swapping roles breaks the voice instantly.
-4. **Audit color sprawl.** If a color outside `#000`, `#1a1a1a`, `#757575`, `#e2e8f0`, `#ffffff`, `#057dbc` appears in chrome (not photography), remove it. WIRED's restraint is non-negotiable.
-5. **Audit kickers.** Every story should have an UPPERCASE mono kicker. Without it, the page reads as a generic blog, not WIRED.
-6. **Audit rules.** Add hairline `1px solid #000` dividers wherever two stories or modules meet without a clear visual break. Rules are the connective tissue.
+### Border Radius Scale
+
+| Token | Value | Use |
+|---|---|---|
+| `{rounded.none}` | 0px | Every interactive shape — buttons, inputs, cards. The brand's signature square geometry. |
+| `{rounded.full}` | 9999px | Circular icon containers only (social-share, account avatar). |
+
+### Photography Geometry
+- Cover stories: 16:9 hero, edge-to-edge.
+- Secondary story cards: 4:3 thumbnails.
+- Article body images: native aspect, full column width.
+- Bylines / avatars: circular `{rounded.full}` 28 px crops.
+
+## Components
+
+### Buttons
+
+**`button-primary`** — the square black CTA.
+- Background `{colors.primary}`, text `{colors.on-primary}`, label `{typography.button-md}` (Apercu 16 px / 700 / 0.3 px tracking), padding `{spacing.md} {spacing.xl}`, shape `{rounded.none}` 0 px.
+
+**`button-outline`** — the white outline CTA.
+- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, same typography / padding / shape.
+
+**`button-icon-circular`** — the circular share-icon button.
+- Background `{colors.canvas}`, ink icon, shape `{rounded.full}`.
+
+### Cards & Containers
+
+**`story-card-large`** — the cover-story card with `{typography.display-md}` headline.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.lg}`. No border — the card lives on the canvas with the photo doing the work.
+
+**`story-card`** — the secondary story card.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md}`. Photo at top, sans display heading + body lead below.
+
+**`story-row`** — the bylined story list row.
+- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.hairline}` bottom border, body in `{typography.body-md-strong}`, padding `{spacing.lg}` 0.
+
+### Inputs & Forms
+
+**`text-input`** — the standard text input.
+- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, body in `{typography.body-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.none}`.
+
+### Navigation
+
+**`nav-bar`** — the top nav, light by default.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.xl}`. Layout: hamburger left, masthead centre, Subscribe right.
+
+**`nav-link`** — link items inside nav.
+- Text `{colors.ink}`, set in `{typography.body-sm-strong}` (Apercu 14 / 700).
+
+**`footer`** — the black footer band.
+- Background `{colors.primary}`, text `{colors.on-primary}`, padding `{spacing.4xl} {spacing.xl}`. Body in `{typography.body-sm}` (Apercu 14 / 400). Footer column eyebrows in `{typography.body-sm-strong}`.
+
+### Signature Components
+
+**`hero-band`** — the white hero band hosting the cover-story.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.4xl} {spacing.xl}`. Cover headline in `{typography.display-hero}` (WiredDisplay 64 px).
+
+**`masthead-band`** — the thin top band with the wordmark.
+- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.xl}`. The wordmark sits centred; flanked by section nav.
+
+**`category-eyebrow`** — the small uppercase category label above story headlines.
+- Text `{colors.ink}`, set in `{typography.body-sm-strong}` (Apercu 14 / 700 — though some campaigns use ALL CAPS via CSS).
+
+**`byline-row`** — the article byline strip.
+- Background `{colors.canvas}`, text `{colors.body}`, body in `{typography.byline}` (BreveText 12.73 / 700 / line-height 2.2). Includes an author avatar + name + date.
+
+**`hairline-divider`** — the 1 px line between story rows.
+- 1 px solid `{colors.hairline}`.
+
+### Examples (illustrative)
+
+> Auto-derived kit-mirror demonstration surfaces (`scripts/derive-examples-block.mjs`). Each `ex-*` entry references brand-native primitives so downstream consumers (`/preview-design`, `/generate-kit`) re-skin the same 10 surfaces consistently. `TO_FILL` markers indicate missing primitives — resolve in the LLM judgment pass.
+
+**`ex-pricing-tier`** — Default Pricing tier card. Re-uses feature-card chrome with brand canvas-soft surface.
+- Properties: `backgroundColor`, `textColor`, `borderColor`, `rounded`, `padding`
+
+**`ex-pricing-tier-featured`** — Featured/highlighted tier — polarity-flipped surface (dark fill + light text in light mode, light fill + dark text in dark mode).
+- Properties: `backgroundColor`, `textColor`, `rounded`, `padding`
+
+**`ex-product-selector`** — What's Included summary card — re-purposed for SaaS / B2B verticals (NOT a literal product gallery).
+- Properties: `backgroundColor`, `rounded`, `padding`
+
+**`ex-cart-drawer`** — Subscription summary — re-purposed for SaaS / B2B (line items per add-on, not literal cart).
+- Properties: `backgroundColor`, `rounded`, `padding`, `item-divider`
+
+**`ex-app-shell-row`** — Sidebar nav row inside the App Shell example. Active state uses brand primary as the indicator.
+- Properties: `backgroundColor`, `activeIndicator`, `rounded`, `padding`
+
+**`ex-data-table-cell`** — Default data-table th + td chrome. Header uses mono-caps eyebrow typography; body uses body-sm.
+- Properties: `headerBackground`, `headerTypography`, `bodyTypography`, `cellPadding`, `rowBorder`
+
+**`ex-auth-form-card`** — Sign-in / sign-up card. Re-uses feature-card chrome with text-input primitives inside.
+- Properties: `backgroundColor`, `rounded`, `padding`
+
+**`ex-modal-card`** — Modal dialog surface — same chrome as feature-card with elevated shadow.
+- Properties: `backgroundColor`, `rounded`, `padding`
+
+**`ex-empty-state-card`** — Empty-state illustration frame.
+- Properties: `backgroundColor`, `rounded`, `padding`, `captionTypography`
+
+**`ex-toast`** — Toast notification surface — feature-card shape + medium shadow.
+- Properties: `backgroundColor`, `rounded`, `padding`, `typography`
+
+
+## Do's and Don'ts
+
+### Do
+- Reserve `{colors.primary}` black for the wordmark, every CTA, and the footer fill. The brand IS the strict black-on-white duet.
+- Set hero headlines in `{typography.display-hero}` (WiredDisplay 64 px weight 400). The proprietary serif IS the brand's typographic signature.
+- Use `{rounded.none}` 0 px on every button and form input. The brand reads as a printed magazine — square corners are non-negotiable.
+- Pair WiredDisplay (serif display) with BreveText (serif body) and Apercu (sans labels). Three faces, three roles.
+- Render story rows with `{colors.hairline}` 1 px dividers — the brand's only elevation cue.
+
+### Don't
+- Don't introduce a chromatic brand accent. The link blue is reserved for inline body links inside articles only.
+- Don't round button corners. The brand never softens its rectangular geometry.
+- Don't drop a soft drop-shadow on cards. Surface contrast and hairlines carry elevation.
+- Don't substitute the proprietary serif faces with a generic sans for display. The serif voice is the brand.
+- Don't promote display weight beyond 400. The brand's elegance is in the typeface design, not bold weight.

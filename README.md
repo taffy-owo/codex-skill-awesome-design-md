@@ -5,8 +5,9 @@
 **为 AI 编码助手注入品牌级设计直觉**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Templates](https://img.shields.io/badge/品牌模板-69-blueviolet)](awesome-design-md/references/templates/)
+[![Templates](https://img.shields.io/badge/品牌模板-73-blueviolet)](awesome-design-md/references/templates/)
 [![Upstream](https://img.shields.io/badge/上游-VoltAgent%2Fawesome--design--md-orange)](https://github.com/VoltAgent/awesome-design-md)
+[![CI](https://github.com/taffy-owo/codex-skill-awesome-design-md/actions/workflows/test.yml/badge.svg)](https://github.com/taffy-owo/codex-skill-awesome-design-md/actions/workflows/test.yml)
 
 [English](README_EN.md) | **中文**
 
@@ -16,7 +17,7 @@
 
 ## 📖 简介
 
-一个可独立发布的 [Codex](https://github.com/openai/codex) 技能包，让你的 AI 编码助手在生成前端 UI 时，自动套用 **69 个知名品牌** 的完整设计规范（`DESIGN.md`），而非千篇一律的默认样式。
+一个可独立发布的 [Codex](https://github.com/openai/codex) 技能包，让你的 AI 编码助手在生成前端 UI 时，自动套用 **73 个知名品牌** 的完整设计规范（`DESIGN.md`），而非千篇一律的默认样式。
 
 每个 `DESIGN.md` 遵循 [Google Stitch](https://github.com/nicepkg/nice-getdesign) 格式，包含 9 大标准章节：
 
@@ -34,16 +35,18 @@
 
 ## ✨ 亮点
 
-- 🏢 **69 个品牌** — 覆盖 AI、开发工具、SaaS、金融、汽车、消费科技等领域
+- 🏢 **73 个品牌** — 覆盖 AI、开发工具、SaaS、金融、汽车、消费科技等领域
 - 📦 **完全本地化** — 无需 API、无需网络，Markdown 即取即用
 - 🔧 **CLI 工具** — `list` / `install` 一键操作
 - 🔄 **上游同步** — 脚本自动拉取 VoltAgent 仓库和 `getdesign` npm 包的最新模板
 - 🤖 **多 Agent 支持** — 内含 OpenAI Agent YAML 配置
+- ✅ **CI/CD** — GitHub Actions 自动测试 + 每周上游同步
+- 🧪 **测试覆盖** — pytest 单元测试和集成测试
 
 ## 🏷️ 覆盖品牌
 
 <details>
-<summary>查看全部 69 个品牌</summary>
+<summary>查看全部 73 个品牌</summary>
 
 ### AI & LLM 平台
 `claude` · `cohere` · `elevenlabs` · `minimax` · `mistral.ai` · `ollama` · `opencode.ai` · `replicate` · `runwayml` · `together.ai` · `voltagent` · `x.ai`
@@ -63,20 +66,23 @@
 ### 金融科技 & 加密
 `binance` · `coinbase` · `kraken` · `mastercard` · `revolut` · `stripe` · `wise`
 
+### 协作 & 通讯
+`slack`
+
 ### 电商 & 零售
 `airbnb` · `meta` · `nike` · `shopify` · `starbucks`
 
 ### 媒体 & 消费科技
-`apple` · `ibm` · `nvidia` · `pinterest` · `playstation` · `spacex` · `spotify` · `theverge` · `uber` · `vodafone` · `wired`
+`apple` · `dell-1996` · `hp` · `ibm` · `nvidia` · `pinterest` · `playstation` · `spacex` · `spotify` · `theverge` · `uber` · `vodafone` · `wired`
 
 ### 汽车
-`bmw` · `bugatti` · `ferrari` · `lamborghini` · `renault` · `tesla`
+`bmw` · `bmw-m` · `bugatti` · `ferrari` · `lamborghini` · `renault` · `tesla`
 
 </details>
 
 ## 🚀 安装
 
-### 方式一：通过 Codex 内置 skill-installer
+### 方式一：OpenAI Codex
 
 ```bash
 python <CODEX_HOME>/skills/.system/skill-installer/scripts/install-skill-from-github.py \
@@ -84,14 +90,26 @@ python <CODEX_HOME>/skills/.system/skill-installer/scripts/install-skill-from-gi
   --path awesome-design-md
 ```
 
-### 方式二：指定 GitHub URL
+### 方式二：指定 GitHub URL（Codex）
 
 ```bash
 python <CODEX_HOME>/skills/.system/skill-installer/scripts/install-skill-from-github.py \
   --url https://github.com/taffy-owo/codex-skill-awesome-design-md/tree/main/awesome-design-md
 ```
 
-安装后重启 Codex 即可生效。
+### 方式三：Antigravity（Gemini）
+
+```bash
+python awesome-design-md/scripts/install_to_antigravity.py
+# 或指定路径：
+python awesome-design-md/scripts/install_to_antigravity.py --antigravity-home ~/.gemini/antigravity
+```
+
+### 方式四：手动安装（通用）
+
+将 `awesome-design-md/` 目录拷贝到你的 AI 编码助手的 skills 目录中即可。
+
+安装后重启 AI 编码助手即可生效。
 
 ## 📋 使用
 
@@ -130,19 +148,25 @@ python scripts/sync_upstream.py
 
 ```
 .
-├── awesome-design-md/          # Codex 技能目录（安装时拷贝这个）
-│   ├── SKILL.md                # 技能定义文件
+├── awesome-design-md/              # Codex 技能目录（安装时拷贝这个）
+│   ├── SKILL.md                    # 技能定义文件
 │   ├── agents/
-│   │   └── openai.yaml         # OpenAI Agent 集成配置
+│   │   └── openai.yaml             # OpenAI Agent 集成配置
 │   ├── scripts/
-│   │   ├── apply_template.py   # 模板列表 / 安装 CLI
-│   │   └── sync_upstream.py    # 上游同步脚本
+│   │   ├── apply_template.py       # 模板列表 / 安装 CLI
+│   │   ├── sync_upstream.py        # 上游同步脚本
+│   │   └── install_to_antigravity.py  # Antigravity 安装脚本
 │   └── references/
-│       ├── templates/          # 69 个 DESIGN.md 模板 + manifest.json
-│       └── upstream/           # 上游快照和同步元数据
+│       ├── templates/              # 73 个 DESIGN.md 模板 + manifest.json
+│       └── upstream/               # 上游快照和同步元数据
+├── tests/                          # pytest 测试套件
+├── .github/workflows/              # CI/CD 工作流
+│   ├── test.yml                    # 自动测试
+│   └── sync-upstream.yml           # 每周上游同步
+├── CHANGELOG.md                    # 变更日志
 ├── LICENSE
-├── README.md                   # ← 你在这里（中文）
-└── README_EN.md                # 英文版
+├── README.md                       # ← 你在这里（中文）
+└── README_EN.md                    # 英文版
 ```
 
 ## 🎯 快速选型指南

@@ -1,20 +1,20 @@
 {
-  "syncedAt": "2026-04-26T01:45:23.066570+00:00",
+  "syncedAt": "2026-06-01T23:07:02.348195+00:00",
   "github": {
     "repoUrl": "https://github.com/VoltAgent/awesome-design-md.git",
     "branch": "main",
     "mirrorPath": "vendor_imports/awesome-design-md",
     "snapshotPath": "references/upstream/github-repo",
-    "commit": "6dc4def886e9ad4022d616dc2afc2fcdf0056d07"
+    "commit": "6d10c1457484c971cdae35563a1386102b4337c6"
   },
   "package": {
     "spec": "getdesign@latest",
-    "version": "0.6.8",
-    "tarball": "getdesign-0.6.8.tgz",
+    "version": "0.6.21",
+    "tarball": "getdesign-0.6.21.tgz",
     "snapshotPath": "references/upstream/getdesign-package"
   },
   "templates": {
     "path": "references/templates",
-    "count": 69
+    "count": 73
   }
 }
