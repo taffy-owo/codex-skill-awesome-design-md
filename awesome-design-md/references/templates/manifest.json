@@ -296,12 +296,20 @@
     "sourceUpdatedAt": "2026-05-12T17:22:03+03:00"
   },
   {
+    "brand": "nintendo-2001",
+    "file": "nintendo-2001.md",
+    "description": "Y2K \"console chrome\" web. Brushed-periwinkle metal panels, amber nav on a dotted carbon bar, outlined Arial-Black box-art type.",
+    "templateHash": "sha256:9630af17090d5c39ba9d8b5915a597a96c7552efe1422b3b8c3f31fb3e636716",
+    "sourceCommit": null,
+    "sourceUpdatedAt": null
+  },
+  {
     "brand": "notion",
     "file": "notion.md",
     "description": "All-in-one workspace. Warm minimalism, serif headings, soft surfaces.",
-    "templateHash": "sha256:fa9d6e78216d8f3e5d3990709ca2de6bc2e268e945bb94f255fd1bfb15455266",
-    "sourceCommit": "c1070839d86c9a6b6a0b95ffd4c12872358ff3f5",
-    "sourceUpdatedAt": "2026-05-12T17:22:03+03:00"
+    "templateHash": "sha256:6dd125ef080ed34f063fe8cd7b274359125aaab57bba4570b60423314951cd48",
+    "sourceCommit": "0124b215e8b91dddab7d002f9717674c9ac1c13d",
+    "sourceUpdatedAt": "2026-06-04T11:15:07+03:00"
   },
   {
     "brand": "nvidia",
