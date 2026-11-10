@@ -1,0 +1,3 @@
+# Template hashes describe the published bytes, including on Windows checkouts.
+awesome-design-md/references/templates/*.md text eol=lf
+awesome-design-md/references/templates/manifest.json text eol=lf

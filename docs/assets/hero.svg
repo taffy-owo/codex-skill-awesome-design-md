@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title description">
+  <title id="title">Awesome Design MD</title>
+  <desc id="description">Design language, in plain text. Brand-inspired design systems for AI coding assistants.</desc>
+  <rect width="1200" height="300" rx="20" fill="#f5f3ee"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#20221f">
+    <rect x="48" y="38" width="28" height="28" rx="6" fill="#20221f"/>
+    <path d="M55 57 62 46 69 57Z" fill="#c6ee7a"/>
+    <text x="90" y="58" font-size="13" font-weight="700" letter-spacing="2">A FIELD GUIDE FOR AI BUILDERS</text>
+    <text x="45" y="139" font-size="67" font-weight="700" letter-spacing="-3">Awesome Design MD</text>
+    <text x="49" y="183" font-size="25" fill="#62665b">Design language, in plain text.</text>
+    <path d="M49 214H784" stroke="#d9dcd2"/>
+    <text x="49" y="252" font-family="Consolas, monospace" font-size="13" fill="#62665b">BRAND SYSTEMS</text>
+    <circle cx="206" cy="248" r="3" fill="#62665b"/>
+    <text x="226" y="252" font-family="Consolas, monospace" font-size="13" fill="#62665b">LOCAL MARKDOWN</text>
+    <circle cx="384" cy="248" r="3" fill="#62665b"/>
+    <text x="404" y="252" font-family="Consolas, monospace" font-size="13" fill="#62665b">CODEX READY</text>
+  </g>
+  <g transform="translate(850 39)">
+    <rect x="46" y="0" width="206" height="182" rx="12" fill="#171721"/>
+    <rect x="23" y="23" width="206" height="182" rx="12" fill="#5266eb"/>
+    <rect x="0" y="46" width="206" height="182" rx="12" fill="#c6ee7a" stroke="#a4c96a"/>
+    <g font-family="Consolas, monospace" fill="#26371b">
+      <text x="22" y="79" font-size="12">DESIGN.md</text>
+      <text x="22" y="121" font-size="20" font-weight="700">## Your next</text>
+      <text x="22" y="149" font-size="20" font-weight="700">   direction.</text>
+      <path d="M22 175H184" stroke="#96b760"/>
+      <circle cx="29" cy="199" r="7" fill="#171721"/>
+      <circle cx="51" cy="199" r="7" fill="#5266eb"/>
+      <circle cx="73" cy="199" r="7" fill="#f7f1e8"/>
+      <path d="M157 199H184M177 192 184 199 177 206" fill="none" stroke="#26371b" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
