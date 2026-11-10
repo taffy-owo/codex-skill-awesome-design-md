@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840" role="img" aria-labelledby="title description">
+  <title id="title">Six directions. One Markdown workflow.</title>
+  <desc id="description">Illustrative mini interfaces using Oura, Mercury, Mobbin, DJI, Vercel and Stripe template colors. These are design studies, not official website screenshots. System fonts substitute for proprietary brand fonts.</desc>
+  <defs>
+    <linearGradient id="stripe-wash" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#533afd"/><stop offset=".55" stop-color="#f96bee"/><stop offset="1" stop-color="#f5e9d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="840" rx="20" fill="#f5f3ee"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="40" y="43" font-family="Consolas, monospace" font-size="12" letter-spacing="2" fill="#62665b">THE DESIGN SHELF / 01</text>
+    <text x="40" y="87" font-size="32" font-weight="700" letter-spacing="-1" fill="#20221f">Six directions. One Markdown workflow.</text>
+    <text x="40" y="116" font-size="15" fill="#62665b">Explore the palette, type rhythm, surfaces and component details behind each template.</text>
+
+    <g transform="translate(40 148)">
+      <rect width="360" height="252" rx="12" fill="#f7f1e8" stroke="#e1dcd3"/>
+      <text x="22" y="31" font-size="13" font-weight="700" fill="#4a4741">01 / OURA</text>
+      <text x="285" y="31" font-size="10" letter-spacing="1" fill="#4a4741">NEW</text>
+      <path d="M22 47H338" stroke="#e1dcd3"/>
+      <text x="22" y="92" font-family="Georgia, serif" font-size="30" fill="#1c1b1a">A little more</text>
+      <text x="22" y="127" font-family="Georgia, serif" font-size="30" fill="#1c1b1a">room to breathe.</text>
+      <text x="22" y="156" font-size="11" fill="#4a4741">Warm paper. Quiet type. Earth tones.</text>
+      <rect x="22" y="179" width="118" height="34" rx="17" fill="#2a72de"/>
+      <text x="42" y="201" font-size="11" fill="#ffffff">Find your balance</text>
+      <circle cx="284" cy="196" r="31" fill="#849671"/>
+      <circle cx="284" cy="196" r="18" fill="#f7f1e8"/>
+      <path d="M22 232H338" stroke="#e1dcd3"/>
+    </g>
+    <g transform="translate(420 148)">
+      <rect width="360" height="252" rx="12" fill="#171721"/>
+      <text x="22" y="31" font-size="13" font-weight="700" fill="#ededf3">02 / MERCURY</text>
+      <text x="285" y="31" font-size="10" letter-spacing="1" fill="#c3c3cc">NEW</text>
+      <path d="M22 47H338" stroke="#393946"/>
+      <text x="22" y="85" font-size="25" fill="#ededf3">Space for your</text>
+      <text x="22" y="115" font-size="25" fill="#ededf3">next big move.</text>
+      <rect x="22" y="137" width="316" height="57" rx="8" fill="#1e1e2a"/>
+      <text x="36" y="156" font-size="9" fill="#c3c3cc">TOTAL BALANCE</text>
+      <text x="36" y="180" font-size="20" fill="#ededf3">$128,450.00</text>
+      <path d="m227 175 18-8 18 3 18-16 18 5 23-12" fill="none" stroke="#9cb4e8" stroke-width="2"/>
+      <rect x="22" y="207" width="115" height="28" rx="14" fill="#5266eb"/>
+      <text x="42" y="225" font-size="10" fill="#ffffff">Open an account</text>
+    </g>
+    <g transform="translate(800 148)">
+      <rect width="360" height="252" rx="12" fill="#ffffff" stroke="#e0e0e0"/>
+      <text x="22" y="31" font-size="13" font-weight="700" fill="#141414">03 / MOBBIN</text>
+      <text x="285" y="31" font-size="10" letter-spacing="1" fill="#707070">NEW</text>
+      <path d="M22 47H338" stroke="#e0e0e0"/>
+      <text x="22" y="83" font-size="24" font-weight="700" letter-spacing="-.8" fill="#141414">Find your next idea.</text>
+      <rect x="22" y="101" width="74" height="25" rx="13" fill="#141414"/>
+      <text x="41" y="117" font-size="10" fill="#ffffff">Explore</text>
+      <text x="115" y="117" font-size="10" fill="#707070">Collections</text>
+      <rect x="22" y="141" width="98" height="88" rx="8" fill="#f3f3f3"/>
+      <rect x="130" y="141" width="98" height="88" rx="8" fill="#f3f3f3"/>
+      <rect x="238" y="141" width="100" height="88" rx="8" fill="#f3f3f3"/>
+      <rect x="48" y="153" width="46" height="64" rx="6" fill="#ffffff" stroke="#e0e0e0"/>
+      <circle cx="71" cy="172" r="10" fill="#0066ff"/>
+      <path d="M58 192H84M58 199H78" stroke="#e0e0e0" stroke-width="3"/>
+      <rect x="148" y="164" width="62" height="42" rx="5" fill="#ffffff" stroke="#e0e0e0"/>
+      <path d="M156 175H202M156 185H185M156 195H196" stroke="#141414" stroke-width="3"/>
+      <circle cx="288" cy="185" r="25" fill="#141414"/>
+      <path d="m279 185 6 6 13-14" fill="none" stroke="#ffffff" stroke-width="3"/>
+    </g>
+
+    <g fill="#62665b" font-size="12">
+      <text x="42" y="426">WARM EDITORIAL / READING</text>
+      <text x="422" y="426">DARK FINTECH / DASHBOARDS</text>
+      <text x="802" y="426">MINIMAL GALLERIES / LIBRARIES</text>
+    </g>
+
+    <g transform="translate(40 454)">
+      <rect width="360" height="252" rx="12" fill="#ffffff" stroke="#e8e8e8"/>
+      <text x="22" y="31" font-size="13" font-weight="700" fill="#262626">04 / DJI</text>
+      <text x="285" y="31" font-size="10" letter-spacing="1" fill="#595959">NEW</text>
+      <path d="M22 47H338" stroke="#e8e8e8"/>
+      <rect x="22" y="63" width="316" height="128" rx="6" fill="#f7f9fa"/>
+      <text x="180" y="85" text-anchor="middle" font-size="10" fill="#595959">BUILT FOR A WIDER PERSPECTIVE</text>
+      <g transform="translate(180 135)" fill="none" stroke="#9fa3a6" stroke-width="8" stroke-linecap="round">
+        <path d="M-18-3-65-22M18-3 65-22M-18 3-65 22M18 3 65 22"/>
+        <ellipse cx="-68" cy="-23" rx="27" ry="5" stroke-width="4"/>
+        <ellipse cx="68" cy="-23" rx="27" ry="5" stroke-width="4"/>
+        <ellipse cx="-68" cy="23" rx="27" ry="5" stroke-width="4"/>
+        <ellipse cx="68" cy="23" rx="27" ry="5" stroke-width="4"/>
+        <rect x="-23" y="-13" width="46" height="29" rx="8" fill="#3b3e40" stroke="none"/>
+        <circle cx="0" cy="17" r="9" fill="#262626" stroke="#6c7073" stroke-width="3"/>
+      </g>
+      <text x="22" y="220" font-size="17" font-weight="700" fill="#262626">Make room for possibility.</text>
+      <rect x="266" y="203" width="72" height="28" rx="14" fill="#0070d5"/>
+      <text x="284" y="221" font-size="10" fill="#ffffff">Explore</text>
+    </g>
+    <g transform="translate(420 454)">
+      <rect width="360" height="252" rx="12" fill="#fafafa" stroke="#ebebeb"/>
+      <text x="22" y="31" font-size="13" font-weight="700" fill="#171717">05 / VERCEL</text>
+      <path d="M22 47H338" stroke="#ebebeb"/>
+      <g stroke="#ebebeb">
+        <path d="M22 68H338M22 98H338M22 128H338M22 158H338M22 188H338M22 218H338"/>
+        <path d="M40 48V234M80 48V234M120 48V234M160 48V234M200 48V234M240 48V234M280 48V234M320 48V234"/>
+      </g>
+      <path d="m180 65 18 31h-36Z" fill="#171717"/>
+      <rect x="49" y="109" width="262" height="73" fill="#fafafa"/>
+      <text x="180" y="137" text-anchor="middle" font-size="26" font-weight="700" letter-spacing="-1" fill="#171717">Build with precision.</text>
+      <text x="180" y="164" text-anchor="middle" font-size="12" fill="#4d4d4d">Less noise. More possibility.</text>
+      <rect x="114" y="193" width="132" height="33" rx="6" fill="#171717"/>
+      <text x="140" y="214" font-size="11" fill="#ffffff">Start building</text>
+    </g>
+    <g transform="translate(800 454)">
+      <rect width="360" height="252" rx="12" fill="#f6f9fc" stroke="#e3e8ee"/>
+      <path d="M0 59H360V151L0 205Z" fill="url(#stripe-wash)"/>
+      <text x="22" y="31" font-size="13" font-weight="700" fill="#0d253d">06 / STRIPE</text>
+      <text x="22" y="99" font-size="27" font-weight="700" letter-spacing="-1" fill="#0d253d">Ideas into</text>
+      <text x="22" y="132" font-size="27" font-weight="700" letter-spacing="-1" fill="#0d253d">momentum.</text>
+      <rect x="210" y="87" width="126" height="128" rx="8" fill="#ffffff" stroke="#e3e8ee"/>
+      <text x="223" y="111" font-size="9" fill="#64748d">PAYMENT OVERVIEW</text>
+      <text x="223" y="139" font-size="22" font-weight="700" fill="#0d253d">$24,800</text>
+      <g fill="#533afd">
+        <rect x="224" y="174" width="10" height="22" rx="2"/>
+        <rect x="241" y="166" width="10" height="30" rx="2"/>
+        <rect x="258" y="171" width="10" height="25" rx="2"/>
+        <rect x="275" y="155" width="10" height="41" rx="2"/>
+        <rect x="292" y="148" width="10" height="48" rx="2"/>
+        <rect x="309" y="142" width="10" height="54" rx="2"/>
+      </g>
+      <rect x="22" y="201" width="118" height="30" rx="15" fill="#533afd"/>
+      <text x="43" y="220" font-size="11" fill="#ffffff">Get started</text>
+    </g>
+    <g fill="#62665b" font-size="12">
+      <text x="42" y="732">PRODUCT SHOWCASES / STORES</text>
+      <text x="422" y="732">DEVELOPER TOOLS / INFRASTRUCTURE</text>
+      <text x="802" y="732">MARKETING / PAYMENTS</text>
+    </g>
+    <path d="M40 760H1160" stroke="#d9dcd2"/>
+    <text x="40" y="791" font-size="12" fill="#62665b">Illustrative studies from local template tokens. System fonts used; these are not official website screenshots.</text>
+    <text x="1160" y="817" text-anchor="end" font-family="Consolas, monospace" font-size="11" fill="#62665b">GETDESIGN 0.6.26</text>
+  </g>
+</svg>

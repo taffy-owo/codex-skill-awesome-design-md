@@ -39,9 +39,9 @@ This skill installs and applies locally vendored `DESIGN.md` templates from the 
 ### 4. Refresh upstream when needed
 
 - Run `python scripts/sync_upstream.py` from this skill directory to refresh:
-  - the GitHub mirror of `VoltAgent/awesome-design-md`
-  - the official `getdesign` npm package snapshot
   - the locally vendored template set in `references/templates/`
+  - source metadata for the current GitHub commit and published `getdesign` version
+- Downloads stay in a temporary directory. Only manifest-listed Markdown templates and source metadata belong in the skill; do not add upstream clones, package snapshots, or archives.
 
 ## Fast selection guide
 
@@ -50,13 +50,14 @@ This skill installs and applies locally vendored `DESIGN.md` templates from the 
 - Dark AI and builder products: `claude`, `cursor`, `supabase`, `raycast`, `resend`
 - Motion-heavy or marketing-forward: `framer`, `stripe`, `clay`, `spotify`, `renault`
 - Editorial or luxury: `apple`, `tesla`, `ferrari`, `bugatti`, `airbnb`
+- Warm editorial and reading: `oura`, `notion`, `wired`
+- Product galleries: `mobbin`, `dji`
+- Fintech and comparison tools: `mercury`, `nerdwallet`
 
 ## Local resources
 
 - Template manifest: `references/templates/manifest.json`
 - Actual templates: `references/templates/*.md`
-- Upstream GitHub snapshot: `references/upstream/github-repo/`
-- Upstream `getdesign` package snapshot: `references/upstream/getdesign-package/`
 - Source metadata from the last sync: `references/upstream/sources.json`
 
 ## Commands
@@ -71,5 +72,5 @@ python scripts/sync_upstream.py
 
 ## Notes
 
-- The GitHub repository currently mirrors template entries but not the full template bodies, so the official `getdesign` npm package is the authoritative source for actual template content.
+- The published `getdesign` npm package is the source for installed template content. GitHub may list brands before they appear in a package release; use the local manifest to determine availability.
 - The install script supports aliases such as `linear -> linear.app`, `mistral -> mistral.ai`, and `xai -> x.ai`.

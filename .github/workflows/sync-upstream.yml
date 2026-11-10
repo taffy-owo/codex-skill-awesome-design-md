@@ -46,5 +46,8 @@ jobs:
             - **getdesign**: `${{ steps.sources.outputs.version }}`
             - **Templates**: `${{ steps.sources.outputs.count }}`
           branch: chore/sync-upstream
+          add-paths: |
+            awesome-design-md/references/templates/
+            awesome-design-md/references/upstream/sources.json
           delete-branch: true
           labels: automated,upstream-sync
